@@ -25,13 +25,10 @@ body{
 .header{
     width: 100%;
     background: linear-gradient(180deg, #6EC1E4 0%, #4DAED0 100%);
-
     position: fixed;
     top: 0;
     left: 0;
-
     z-index: 1000;
-
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
@@ -41,14 +38,12 @@ body{
 .nav-bar{
     width: 100%;
     max-width: 1200px;
-
+    height: auto;
     margin: auto;
     padding: 14px 20px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 20px;
 }
 
@@ -59,10 +54,8 @@ body{
     display: flex;
     align-items: center;
     gap: 10px;
-
     text-decoration: none;
     color: #fff;
-
     font-size: 22px;
     font-weight: 700;
 }
@@ -78,28 +71,21 @@ body{
 ========================= */
 .nav-center ul{
     list-style: none;
-
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
     gap: 15px;
 }
 
 .nav-center a{
     display: block;
-
     color: #fff;
     text-decoration: none;
-
     padding: 10px 14px;
-
     border-radius: 8px;
-
     font-size: 16px;
     font-weight: 500;
-
     transition: all 0.3s ease;
 }
 
@@ -115,6 +101,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 30px;
 }
 
 /* =========================
@@ -135,15 +122,21 @@ body{
 .switch-language select{
     border: none;
     outline: none;
-
     padding: 8px 10px;
-
     border-radius: 6px;
-
     color: #0f5132;
     font-size: 15px;
-
     cursor: pointer;
+}
+.notifications {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+.notifications img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
 }
 
 /* =========================
@@ -152,19 +145,12 @@ body{
 .main-contant{
     width: 100%;
     min-height: 100vh;
-
     padding: 20px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     text-align: center;
-
-    background-image:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-        url('../images/hero/home.jpg');
-
+    background-image:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),url('../images/hero/home.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -176,15 +162,11 @@ body{
 .home-banner{
     width: 100%;
     max-width: 700px;
-
     padding: 40px;
-
     color: #fff;
     text-align: center;
-
     border-radius: 12px;
 }
-
 .home-banner h1{
     font-size: 52px;
     margin-bottom: 20px;
@@ -200,19 +182,13 @@ body{
 ========================= */
 .btn{
     display: inline-block;
-
     padding: 12px 28px;
-
     background-color: #32E875;
     color: #fff;
-
     text-decoration: none;
-
     font-size: 16px;
     font-weight: 600;
-
     border-radius: 50px;
-
     transition: all 0.3s ease;
 }
 
@@ -231,17 +207,13 @@ body{
 .room-summary{
     width: 100%;
     max-width: 1200px;
-
     margin: 60px auto;
     padding: 20px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     gap: 15px;
-
     text-align: center;
 }
 
@@ -249,12 +221,9 @@ body{
 .room-home{
     display: flex;
     flex-direction: row;
-
     gap: 20px;
-
     width: 100%;
     max-width: 1200px;
-
     margin: auto;
     padding: 20px;
 }
@@ -266,9 +235,7 @@ body{
 .room1 img{
     width: 100%;
     height: 350px;
-
     object-fit: cover;
-
     border-radius: 10px;
     display: block;
 }
@@ -335,13 +302,9 @@ body{
     display: flex;
     align-items: center;
     gap: 8px;
-
     background: #f5f7fa;
-
     padding: 10px 14px;
-
     border-radius: 8px;
-
     font-size: 15px;
     font-weight: 500;
 
@@ -355,12 +318,141 @@ body{
 
     object-fit: contain;
 }
-
 .icon{
     width: 40px;
     height: 40px;
     object-fit: cover;
     border-radius: 50%;
+}
+/* Footer */
+.footer{
+    width: 100%;
+    background: white;
+    padding: 40px 20px;
+    color: black;
+}
+
+/* Row */
+.footer .row{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Column */
+.footer .col-4{
+    flex: 1 1 300px;
+}
+
+/* Title */
+.footer h3{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* Logo */
+.footer h3 img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Text */
+.footer p{
+    color: #0b0b0b;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* Contact List */
+.footer ul{
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li{
+    list-style: none;
+    margin-bottom: 14px;
+}
+
+/* Contact Link */
+.footer ul li a{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+    color: #161515;
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+/* Hover */
+.footer ul li a:hover{
+    color: #00bcd4;
+    transform: translateX(5px);
+}
+
+/* Icon */
+.footer ul li a img{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+.btn-viewallroom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-viewallroom a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background-color: #00bcd4;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+.btn-viewallroom a img{
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+.btn-viewallroom a:hover{
+    background-color: #0097a7;
+    transform: translateY(-3px);
+}
+
+.btn-viewallroom a:hover img{
+    transform: translateX(5px);
+}
+/* Excursions & Activities */
+.Ex-Act-welcome {
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
 }
 /* =========================
    GRID SYSTEM
@@ -368,7 +460,6 @@ body{
 .row{
     width: 100%;
 }
-
 .row::after{
     content: "";
     clear: both;
@@ -377,7 +468,7 @@ body{
 
 [class*="col-"]{
     float: left;
-    padding: 10px;
+    padding: 0px;
 }
 
 /* Desktop */
@@ -398,33 +489,26 @@ body{
    TABLET RESPONSIVE
 ========================= */
 @media only screen and (max-width: 992px){
-
     body{
         padding-top: 120px;
     }
-
     .nav-bar{
         flex-direction: column;
         gap: 15px;
     }
-
     .nav-center ul{
         justify-content: center;
     }
-
     .home-banner h1{
         font-size: 40px;
     }
-
     .room-home{
         gap: 15px;
     }
-
     .col-4{
         width: 50%;
     }
 }
-
 /* =========================
    MOBILE RESPONSIVE
 ========================= */
