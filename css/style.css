@@ -442,15 +442,15 @@ body{
     transform: translateX(5px);
 }
 /* button detail room */
-.btn-detail-room {
+/* .btn-detail-room {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 20px;
     background-color: darkgray;
     border-radius: 12px;
-}
-.btn-detail-room a {
+} */
+/* .btn-detail-room a {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -461,11 +461,11 @@ body{
     font-weight: 600;
     border-radius: 50px;
     transition: 0.3s ease;
-}
-.btn-detail-room:hover {
+} */
+/* .btn-detail-room:hover {
     background-color: #0097a7;
     transform: translateY(-3px);
-}
+} */
 /* Excursions & Activities */
 .Ex-Act-welcome {
     width: 100%;
@@ -533,7 +533,6 @@ body{
 .Guest-Reviews-Experiences{
     width: 100%;
     padding: 80px 20px;
-    background: #f6e3e3;
     box-sizing: border-box;
 }
 

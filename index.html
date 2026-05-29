@@ -5,8 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/room_detail.css">
 </head>
 <body>
+    <!-- ROOM DETAIL MODAL -->
+    <div id="roomModal" class="modal">
+        <div class="modal-content">
+            <!-- HEADER -->
+            <div class="modal-header">
+                <h2>Deluxe Double Room with Sea View</h2>
+                <span class="close-btn" onclick="closeRoomModal()">&times;</span>
+            </div>
+            <!-- IMAGE SECTION -->
+            <div class="modal-image-section">
+                <button class="nav-btn left" onclick="prevImage()">
+                    &#10094;
+                </button>
+                <img id="roomImage"
+                    src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop"
+                    alt="Room Image">
+                <button class="nav-btn right" onclick="nextImage()">
+                    &#10095;
+                </button>
+            </div>
+            <!-- IMAGE COUNT -->
+            <div class="image-count">
+                <span id="imageCounter">1/4</span>
+            </div>
+            <!-- ROOM INFO -->
+            <div class="room-info">
+                <div>
+                    <h1>From <span>$45</span> / night</h1>
+                    <div class="features">
+                        <div class="feature-box">
+                            👨‍👩‍👧 2 Guests
+                        </div>
+                        <div class="feature-box">
+                            🛏 1 Extra-large double bed
+                        </div>
+                    </div>
+                </div>
+                <button class="book-btn">
+                    Book now
+                </button>
+            </div>
+            <!-- DESCRIPTION & AMENITIES -->
+            <div class="room-extra-details">
+                <!-- DESCRIPTION -->
+                <div class="description-box">
+                    <h3>ⓘ Description</h3>
+                    <p>
+                        The spacious double room offers air conditioning,
+                        a tea and coffee maker, a terrace with sea views
+                        as well as a private bathroom boasting a walk-in shower.
+                        The unit has 1 bed.
+                    </p>
+                </div>
+                <!-- AMENITIES -->
+                <div class="amenities-box">
+
+                    <h3>🛎 Room Amenities</h3>
+
+                    <div class="amenities-list">
+                        <span>Air Conditioning</span>
+                        <span>Private Bathroom</span>
+                        <span>Free Wifi</span>
+                        <span>Sea View</span>
+                        <span>Tea/Coffee Maker</span>
+                        <span>Terrace</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- -------------------------->
     <div class="header">
         <div class="nav-bar">
             <div class="nav-left">
@@ -82,9 +158,9 @@
                             </div>
                         </div>
                         <div class="btn-detail-room">
-                            <a href="detail.html">
+                            <button class="detail-btn" onclick="openRoomModal()">
                                 <span>Details</span>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -107,9 +183,9 @@
                             </div>
                         </div>
                         <div class="btn-detail-room">
-                            <a href="detail.html">
+                            <button class="detail-btn" onclick="openRoomModal()">
                                 <span>Details</span>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -189,7 +265,8 @@
             </div>
         </div>
     </div>
-    <div class="Guest Reviews-Experiences">
+    <!-- Guest Reviews-Experiences -->
+    <div class="Guest-Reviews-Experiences">
         <div class="row">
             <div class="col-12">
                  <div class="review-header">
@@ -276,7 +353,7 @@
             <div class="col-4">
                 <div class="review-card">
                     <div class="review-profile">
-                        <span>K</span>
+                        <span>S</span>
                     </div>
                     <div class="stars">
                         ★ ★ ★ ★ ★
@@ -285,7 +362,7 @@
                         "An incredible experience from start to finish. The staff go 
                         above and beyond. We rented a scooter and explored the area."
                     </p>
-                    <h3>Kenji</h3>
+                    <h3>Syvon</h3>
                     <small>Japan</small>
                 </div>
             </div> 
@@ -293,7 +370,7 @@
             <div class="col-4">
                 <div class="review-card">
                     <div class="review-profile">
-                        <span>K</span>
+                        <span>V</span>
                     </div>
                     <div class="stars">
                         ★ ★ ★ ★ ★
@@ -302,8 +379,8 @@
                         "An incredible experience from start to finish. The staff go 
                         above and beyond. We rented a scooter and explored the area."
                     </p>
-                    <h3>Kenji</h3>
-                    <small>Japan</small>
+                    <h3>Vy</h3>
+                    <small>Cambodia</small>
                 </div>
             </div> 
         </div>
@@ -313,7 +390,7 @@
             <div class="col-4">
                 <div class="review-card">
                     <div class="review-profile">
-                        <span>K</span>
+                        <span>N</span>
                     </div>
                     <div class="stars">
                         ★ ★ ★ ★ ★
@@ -322,15 +399,15 @@
                         "An incredible experience from start to finish. The staff go 
                         above and beyond. We rented a scooter and explored the area."
                     </p>
-                    <h3>Kenji</h3>
-                    <small>Japan</small>
+                    <h3>Nokea</h3>
+                    <small>China</small>
                 </div>
             </div> 
             <!-- Review 3 -->
             <div class="col-4">
                 <div class="review-card">
                     <div class="review-profile">
-                        <span>K</span>
+                        <span>P</span>
                     </div>
                     <div class="stars">
                         ★ ★ ★ ★ ★
@@ -339,15 +416,15 @@
                         "An incredible experience from start to finish. The staff go 
                         above and beyond. We rented a scooter and explored the area."
                     </p>
-                    <h3>Kenji</h3>
-                    <small>Japan</small>
+                    <h3>Pou</h3>
+                    <small>Cambodia</small>
                 </div>
             </div> 
             <!-- Review 3 -->
             <div class="col-4">
                 <div class="review-card">
                     <div class="review-profile">
-                        <span>K</span>
+                        <span>L</span>
                     </div>
                     <div class="stars">
                         ★ ★ ★ ★ ★
@@ -356,7 +433,7 @@
                         "An incredible experience from start to finish. The staff go 
                         above and beyond. We rented a scooter and explored the area."
                     </p>
-                    <h3>Kenji</h3>
+                    <h3>Ly</h3>
                     <small>Japan</small>
                 </div>
             </div> 
@@ -399,7 +476,7 @@
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="https://maps.app.goo.gl/MNz4LA59FjtXAUts7">
                             <img src="assets/icons/marker.png" alt="Location Icon">
                             <span>Our Location on Google Maps</span>
                         </a>
@@ -465,5 +542,6 @@
             </div>
         </div>
     </div>
+<script src="js/room_detail.js"></script>
 </body>
 </html>
