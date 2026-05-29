@@ -216,6 +216,9 @@ body{
     gap: 15px;
     text-align: center;
 }
+.room-summary h2{
+    font-size: 48px;
+}
 
 /* ROOM HOME */
 .room-home{
@@ -476,6 +479,9 @@ body{
     gap: 15px;
     text-align: center;
 }
+.Ex-Act-welcome h2 {
+    font-size: 48px;
+}
 
 .Ex-Act-detail{
     width: 100%;
@@ -522,6 +528,74 @@ body{
 
 .Ex-Act-detail a span:hover{
     background: #084298;
+}
+/* Guest-Reviews-Experiences */
+.Guest-Reviews-Experiences{
+    width: 100%;
+    padding: 80px 20px;
+    background: #f6e3e3;
+    box-sizing: border-box;
+}
+
+.review-header{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.review-header h2{
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #1d0000;
+}
+
+.review-header p{
+    font-size: 18px;
+    color: #444;
+}
+.review-card{
+    text-align: center;
+    padding: 20px;
+}
+
+.review-profile{
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: rgba(120,150,180,0.5);
+    border: 2px solid #0077b6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-profile span{
+    font-size: 60px;
+    color: #1d0000;
+}
+
+.stars{
+    font-size: 32px;
+    color: gold;
+    margin-bottom: 25px;
+}
+
+.review-text{
+    font-size: 18px;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.review-card h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #1d0000;
+}
+
+.review-card small{
+    font-size: 18px;
+    color: blue;
 }
 /* =========================
    GRID SYSTEM
