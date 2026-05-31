@@ -1,21 +1,31 @@
+const modal = document.getElementById("roomModal");
+const roomImage = document.getElementById("roomImage");
+const imageCounter = document.getElementById("imageCounter");
+
 // OPEN MODAL
 function openRoomModal() {
-    document.getElementById("roomModal").style.display = "block";
+    currentImage = 0;
+    showImage();
+    modal.style.display = "block";
 }
 
 // CLOSE MODAL
 function closeRoomModal() {
-    document.getElementById("roomModal").style.display = "none";
+    modal.style.display = "none";
 }
 
 // CLOSE WHEN CLICK OUTSIDE
 window.onclick = function(event) {
-    const modal = document.getElementById("roomModal");
-
-    if (event.target == modal) {
+    if (event.target === modal) {
         modal.style.display = "none";
     }
 }
+
+window.addEventListener("DOMContentLoaded", function() {
+    if (roomImage && imageCounter) {
+        showImage();
+    }
+});
 
 // IMAGE SLIDER
 const images = [

@@ -14,7 +14,6 @@ body{
 
     position: fixed;
     z-index: 9999; /* HIGHER than navbar */
-
     left: 0;
     top: 0;
 

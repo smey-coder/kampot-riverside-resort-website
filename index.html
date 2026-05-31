@@ -6,6 +6,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/room_detail.css">
+    <link rel="stylesheet" href="css/activity_detail.css">
 </head>
 <body>
     <!-- ROOM DETAIL MODAL -->
@@ -74,8 +75,47 @@
                     </div>
 
                 </div>
-
             </div>
+        </div>
+    </div>
+    <div id="activityModal" class="modal-act">
+
+        <div class="tour-card">
+            <span class="close-btn-atc" onclick="closeActivityModal()">
+                &times;
+            </span>
+
+            <h2>Full Day Bokor National Park</h2>
+
+            <p class="tour-desc">
+                LET'S US BOOK YOUR TOUR. Starts 8:30 am,
+                pick up at your guesthouse.
+            </p>
+
+            <p class="tour-include">
+                Includes: Lunch, water, transport,
+                English speaking guide.
+            </p>
+
+            <ul class="tour-list">
+                <li>Bokor Palace, Old Hotel & Casino</li>
+                <li>Black Palace</li>
+                <li>Church</li>
+                <li>Old Palace & Temple</li>
+                <li>Old French Building</li>
+                <li>Popok Vil Waterfall</li>
+                <li>Return: 2:30–3:00 pm</li>
+            </ul>
+
+            <div class="tour-price">
+                Price: $16
+            </div>
+
+            <hr>
+
+            <p class="tour-footer">
+                Tap to request a booking or ask about pickup.
+            </p>
 
         </div>
 
@@ -160,8 +200,10 @@
                             </div>
                         </div>
                         <div class="btn-detail-room">
-                            <button class="detail-btn" onclick="openRoomModal()">
-                                <span>Details</span>
+                            <button type="button"
+                                    class="detail-btn"
+                                    onclick="openRoomModal()">
+                                    <span>Details</span>
                             </button>
                         </div>
                     </div>
@@ -215,7 +257,7 @@
                 <div class="Ex-Act-detail">
                     <img src="images/gallerys/bokor-hill-station-tour-kampot.jpg" alt="No image">
                     <h4 class="ex-act-name">Full Day Bokor National Park</h4>
-                    <a href="excursions_activities_detail.html">
+                    <a href="#" onclick="openActivityModal(); return false;">
                         <span>Click to View Details</span>
                     </a>
                 </div>
@@ -224,7 +266,7 @@
                 <div class="Ex-Act-detail">
                     <img src="images/gallerys/cao-nguyên-Bokor-ivivu.jpg" alt="No image">
                     <h4 class="ex-act-name">Bokor Park & Country Side</h4>
-                    <a href="excursions_activities_detail.html">
+                    <a href="#" onclick="openActivityModal(); return false;">
                         <span>Click to View Details</span>
                     </a>
                 </div>
@@ -242,7 +284,7 @@
                 <div class="Ex-Act-detail">
                     <img src="images/gallerys/caption.jpg" alt="No image">
                     <h4 class="ex-act-name">Countryside Afternoon Visit</h4>
-                    <a href="excursions_activities_detail.html">
+                    <a href="#" onclick="openActivityModal(); return false;">
                         <span>Click to View Details</span>
                     </a>
                 </div>
@@ -251,7 +293,7 @@
                 <div class="Ex-Act-detail">
                     <img src="images/gallerys/Cambodia-Taxi-Driver-4128.webp" alt="No image">
                     <h4 class="ex-act-name">Private Transport</h4>
-                    <a href="excursions_activities_detail.html">
+                    <a href="#" onclick="openActivityModal(); return false;">
                         <span>Click to View Details</span>
                     </a>
                 </div>
@@ -260,7 +302,7 @@
                 <div class="Ex-Act-detail">
                     <img src="images/gallerys/dariozcountryside2.webp" alt="No image">
                     <h4 class="ex-act-name">Rent Honda</h4>
-                    <a href="excursions_activities_detail.html">
+                    <a href="#" onclick="openActivityModal(); return false;">
                         <span>Click to View Details</span>
                     </a>
                 </div>
@@ -546,5 +588,6 @@
     </div>
 <script src="js/room_detail.js"></script>
 <script src="js/main.js"></script>
+<script src="js/activity_detail.js"></script>
 </body>
 </html>

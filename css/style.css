@@ -742,6 +742,7 @@ body.dark-theme .modal-image-section{
 
     body{
         padding-top: 140px;
+        background-color: #43b9e1;
     }
 
     [class*="col-"]{
