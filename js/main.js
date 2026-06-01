@@ -35,3 +35,6 @@ window.onload = function(){
         icon.src = "assets/icons/sun.png";
     }
 }
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+}

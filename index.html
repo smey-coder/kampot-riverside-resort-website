@@ -125,12 +125,12 @@
         <div class="nav-bar">
             <div class="nav-left">
                 <a class="logo" href="index.html">
-                    <img src="images/logo/kampot.png" alt="Kampot Riverside Logo" onerror="this.style.display='none'">
+                    <img src="images/logo/kampot.png" alt="Kampot Riverside Logo">
                     <span>Kampot Riverside</span>
                 </a>
             </div>
 
-            <nav class="nav-center">
+            <nav class="nav-center" id="navMenu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="rooms.html">Rooms</a></li>
@@ -139,21 +139,26 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-
             <div class="nav-right">
                 <div class="switch-language">
-                    <img src="assets/icons/internet.png" alt="Language Icon"">
-                    <select aria-label="Language selector">
-                        <option value="en">English</option>
-                        <option value="km">Khmer</option>
+                    <img src="assets/icons/internet.png" alt="Language Icon">
+                    <select>
+                        <option>English</option>
+                        <option>Khmer</option>
                     </select>
                 </div>
+
                 <div class="notifications">
-                    <img src="assets/icons/notification.png" alt="No image">
+                    <img src="assets/icons/notification.png" alt="Notification">
                 </div>
-                <!-- DARK MODE BUTTON -->
+
                 <div class="dark-mode" onclick="toggleDarkMode()">
                     <img id="darkIcon" src="assets/icons/moon.png" alt="Dark Mode">
+                </div>
+
+                <!-- Hamburger Menu -->
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    ☰
                 </div>
             </div>
         </div>
