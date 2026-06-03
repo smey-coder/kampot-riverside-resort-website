@@ -140,7 +140,7 @@ body{
 }
 
 /* =========================
-   HERO SECTION
+    HERO SECTION
 ========================= */
 .main-contant{
     width: 100%;
@@ -157,7 +157,7 @@ body{
 }
 
 /* =========================
-   HOME BANNER
+    HOME BANNER
 ========================= */
 .home-banner{
     width: 100%;
@@ -178,7 +178,7 @@ body{
 }
 
 /* =========================
-   BUTTON
+    BUTTON
 ========================= */
 .btn{
     display: inline-block;
@@ -202,7 +202,7 @@ body{
 }
 
 /* =========================
-   ROOM SUMMARY
+    ROOM SUMMARY
 ========================= */
 .room-summary{
     width: 100%;
@@ -598,7 +598,7 @@ body{
     color: blue;
 }
 /* =========================
-   GRID SYSTEM
+    GRID SYSTEM
 ========================= */
 .row{
     width: 100%;
@@ -637,7 +637,7 @@ body{
 .col-12{width:100%;}
 
 /* =========================
-   TABLET RESPONSIVE
+    TABLET RESPONSIVE
 ========================= */
 @media only screen and (max-width: 992px){
     body{
@@ -661,7 +661,7 @@ body{
     }
 }
 /* =========================
-   MOBILE RESPONSIVE
+    MOBILE RESPONSIVE
 ========================= */
 @media only screen and (max-width: 768px){
 
@@ -717,7 +717,7 @@ body{
 }
 
 /* =========================
-   SMALL MOBILE
+    SMALL MOBILE
 ========================= */
 @media only screen and (max-width: 576px){
 
@@ -756,3 +756,5 @@ body{
         font-size: 14px;
     }
 }
+
+
