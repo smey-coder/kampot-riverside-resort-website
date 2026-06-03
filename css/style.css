@@ -192,6 +192,7 @@ body{
     transition: all 0.3s ease;
 }
 
+
 .btn:hover{
     background-color: #28c96a;
     transform: translateY(-2px);
@@ -756,5 +757,3 @@ body{
         font-size: 14px;
     }
 }
-
-
