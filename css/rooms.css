@@ -1,0 +1,289 @@
+body {
+    background-color: #ffffff;
+}
+
+/* --- 1. HERO SECTION STYLES --- */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),url('../images/hero/home.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: #1a1a1a;
+}
+/* --- 2. ACCOMMODATIONS SECTION STYLES --- */
+.content-section {
+    width: 100%;
+    padding: 80px 20px; /* Gives nice breathing room below the hero image */
+    display: flex;
+    justify-content: center;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px; /* Perfect space between header text and the bar */
+}
+
+/* Typography Header */
+.section-header {
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #555555;
+}
+
+
+/* --- 3. BOOKING BAR STYLES --- */
+.booking-bar {
+    background-color: #b3e5fc; /* Matching the light blue shade */
+    width: 100%;
+    padding: 22px 25px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+/* Input Fields Containers */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 130px;
+}
+
+.input-group label {
+    color: #0288d1; /* Blue labels */
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.input-group label .icon {
+    font-size: 15px;
+    color: #333333; /* Dark icons */
+}
+
+.input-group input {
+    width: 100%;
+    height: 42px;
+    padding: 8px 12px;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    background-color: #ffffff;
+}
+
+.input-group input:focus {
+    border-color: #0288d1;
+}
+
+/* Submit Action Button Wrapper */
+.button-group {
+    display: flex;
+    align-items: flex-end;
+}
+
+.book-btn {
+    background-color: #29b6f6; /* Brighter accent blue button */
+    color: #ffffff;
+    border: 1px solid #0288d1;
+    padding: 0 22px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    height: 42px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.book-btn:hover {
+    background-color: #0288d1;
+}
+
+
+/* --- 4. RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 900px) {
+    .hero-title {
+        font-size: 2.3rem;
+    }
+    
+    .booking-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .input-group, .button-group, .book-btn {
+        width: 100%;
+    }
+
+    .book-btn {
+        justify-content: center;
+    }
+}
+.btn-check-availability{
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #32E875;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+.btn-check-availability:hover {
+    background-color: #40eb4e;
+    transform: translateY(-2px);
+}
+.btn-check-availability:active {
+    background-color: #1a1a1a;
+    transform: translateY(0);
+}
+/* Container sizing */
+#row1 {
+    width: 85%;
+    max-width: 1200px;
+    margin: 40px auto;
+    align-items: center;
+}
+
+/* Flex wrapper to place cards horizontally */
+.room-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px; /* Space between columns */
+}
+
+/* Base column setups */
+
+
+/* Room Card container */
+.room-card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Responsive Images */
+.room-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Keeps image proportions cropped clean */
+}
+
+/* Text Padding Area */
+.detail-rooms {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Pushes content down so buttons align perfectly */
+}
+
+/* Typography elements matching the image */
+.name-room {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2962ff; /* Bright blue color for price tag */
+    margin-bottom: 15px;
+}
+
+.price span {
+    color: #333333;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.descr {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Ensures text height differences don't misalign buttons */
+}
+
+/* Pill-Shaped Detail Button */
+.detail-btn {
+    width: 100%;
+    background-color: #dbdbdb; /* Soft gray background matching image */
+    color: #000000;
+    border: 1px solid #b5b5b5;
+    border-radius: 8px;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.detail-btn img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.detail-btn:hover {
+    background-color: #cdcdcd;
+}
+
+/* Responsive Fallback for mobile views */
+@media (max-width: 768px) {
+    .room-details {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+

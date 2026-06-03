@@ -1,136 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/room_detail.css">
-    <link rel="stylesheet" href="css/activity_detail.css">
+    <link rel="stylesheet" href="css/rooms.css">        
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Room</title>
+    
 </head>
+
 <body>
-    <!-- ROOM DETAIL MODAL -->
-    <div id="roomModal" class="modal">
-        <div class="modal-content">
-            <!-- HEADER -->
-            <div class="modal-header">
-                <h2>Deluxe Double Room with Sea View</h2>
-                <span class="close-btn" onclick="closeRoomModal()">&times;</span>
-            </div>
-            <!-- IMAGE SECTION -->
-            <div class="modal-image-section">
-                <button class="nav-btn left" onclick="prevImage()">
-                    &#10094;
-                </button>
-                <img id="roomImage"
-                    src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop"
-                    alt="Room Image">
-                <button class="nav-btn right" onclick="nextImage()">
-                    &#10095;
-                </button>
-            </div>
-            <!-- IMAGE COUNT -->
-            <div class="image-count">
-                <span id="imageCounter">1/4</span>
-            </div>
-            <!-- ROOM INFO -->
-            <div class="room-info">
-                <div>
-                    <h1>From <span>$45</span> / night</h1>
-                    <div class="features">
-                        <div class="feature-box">
-                            👨‍👩‍👧 2 Guests
-                        </div>
-                        <div class="feature-box">
-                            🛏 1 Extra-large double bed
-                        </div>
-                    </div>
-                </div>
-                <button class="book-btn">
-                    Book now
-                </button>
-            </div>
-            <!-- DESCRIPTION & AMENITIES -->
-            <div class="room-extra-details">
-                <!-- DESCRIPTION -->
-                <div class="description-box">
-                    <h3>ⓘ Description</h3>
-                    <p>
-                        The spacious double room offers air conditioning,
-                        a tea and coffee maker, a terrace with sea views
-                        as well as a private bathroom boasting a walk-in shower.
-                        The unit has 1 bed.
-                    </p>
-                </div>
-                <!-- AMENITIES -->
-                <div class="amenities-box">
-                    <h3>🛎 Room Amenities</h3>
-                    <div class="amenities-list">
-                        <span>Air Conditioning</span>
-                        <span>Private Bathroom</span>
-                        <span>Free Wifi</span>
-                        <span>Sea View</span>
-                        <span>Tea/Coffee Maker</span>
-                        <span>Terrace</span>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="activityModal" class="modal-act">
-
-        <div class="tour-card">
-            <span class="close-btn-atc" onclick="closeActivityModal()">
-                &times;
-            </span>
-
-            <h2>Full Day Bokor National Park</h2>
-
-            <p class="tour-desc">
-                LET'S US BOOK YOUR TOUR. Starts 8:30 am,
-                pick up at your guesthouse.
-            </p>
-
-            <p class="tour-include">
-                Includes: Lunch, water, transport,
-                English speaking guide.
-            </p>
-
-            <ul class="tour-list">
-                <li>Bokor Palace, Old Hotel & Casino</li>
-                <li>Black Palace</li>
-                <li>Church</li>
-                <li>Old Palace & Temple</li>
-                <li>Old French Building</li>
-                <li>Popok Vil Waterfall</li>
-                <li>Return: 2:30–3:00 pm</li>
-            </ul>
-
-            <div class="tour-price">
-                Price: $16
-            </div>
-
-            <hr>
-
-            <p class="tour-footer">
-                Tap to request a booking or ask about pickup.
-            </p>
-
-        </div>
-
-    </div>
-    <!-- -------------------------->
+    <!-- ----------Header---------------->
     <div class="header">
         <div class="nav-bar">
             <div class="nav-left">
                 <a class="logo" href="index.html">
-                    <img src="images/logo/kampot.png" alt="Kampot Riverside Logo" onerror="this.style.display='none'">
+                    <img src="images/logo/kampot.png" alt="Kampot Riverside Logo">
                     <span>Kampot Riverside</span>
                 </a>
             </div>
 
-            <nav class="nav-center">
+            <nav class="nav-center" id="navMenu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="rooms.html">Rooms</a></li>
@@ -139,455 +32,268 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-
             <div class="nav-right">
                 <div class="switch-language">
-                    <img src="assets/icons/internet.png" alt="Language Icon"">
-                    <select aria-label="Language selector">
-                        <option value="en">English</option>
-                        <option value="km">Khmer</option>
+                    <img src="assets/icons/internet.png" alt="Language Icon">
+                    <select>
+                        <option>English</option>
+                        <option>Khmer</option>
                     </select>
                 </div>
+
                 <div class="notifications">
-                    <img src="assets/icons/notification.png" alt="No image">
+                    <img src="assets/icons/notification.png" alt="Notification">
                 </div>
-                <!-- DARK MODE BUTTON -->
+
                 <div class="dark-mode" onclick="toggleDarkMode()">
                     <img id="darkIcon" src="assets/icons/moon.png" alt="Dark Mode">
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="welcome">
-        <div class="col-12">
-            <div class="main-contant">
-                <div class="home-banner">
-                    <div class="home-banner-content">
-                        <h1>Luxury Riverside Resort</h1>
-                        <p>Experience nature and elegance in the heart of Kampot, Cambodia.</p>
-                        <a href="rooms.html" class="btn">Explore Now</a>
-                    </div>
+
+                <!-- Hamburger Menu -->
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    ☰
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12">
-            <div class="room-summary">
+</div>
+    <header class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title" style="color: white;">Sanctuary by the River</h1>
+                <p class="hero-subtitle" style="color: white;">Experience elegance and comfort in our riverside accommodations.</p>
+            </div>
+    </header>
+
+    <main class="content-section">
+        <div class="container">
+            
+            <div class="section-header">
                 <h2>Perfect Oasis Accommodations</h2>
                 <p>Riverside rooms designed for serenity, with authentic Kampot charm</p>
-                <a href="rooms.html" class="btn">Open Booking Calendar</a>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="room-home">
-            <div class="col-6">
-                <div class="room1">
-                    <img src="images/rooms/room1.jpg" alt="no image">
-                    <div class="detail-rooms">
-                        <h4 class="name-room">Deluxe Double Room with Sea View</h4>
-                        <h5 class="price">From $45 <span>/night</span></h5>
-                        <p class="descr">The spacious double room offers air conditioning, a tea and coffee maker, a terrace with sea views as well as a private bathroom boasting a walk-in shower. The unit has 1 bed.</p>
-                         <div class="services-line-1">
-                            <div class="service-row1">
-                                <p><img src="assets/icons/internet.png" style="width: 22px; height: 22px;"> Air Conditioning</p>
-                                <p><img src="assets/icons/wi-fi-icon.png" style="width: 22px; height: 22px;"> Wifi Free</p>
-                            </div>
-                            <div class="service-row1">
-                                <p><img src="assets/icons/coffee-cup (1).png" style="width: 22px; height: 22px;"> Tea/Coffee Maker</p>
-                                <p><img src="assets/icons/toilet.png" style="width: 22px; height: 22px;"> Private Bathroom</p>
-                            </div>
-                        </div>
-                        <div class="btn-detail-room">
-                            <button type="button"
-                                    class="detail-btn"
-                                    onclick="openRoomModal()">
-                                    <span>Details</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="room1">
-                    <img src="images/rooms/room2.jpg" alt="no image">
-                    <div class="detail-rooms">
-                        <h4 class="name-room">Family Room with Sea View</h4>
-                        <h5 class="price">From $58 <span>/night</span></h5>
-                        <p class="descr">The family room features air conditioning, a tea and coffee maker, a terrace with garden views as well as a private bathroom boasting a walk-in shower. The unit has 2 beds.</p>
-                        <div class="services-line-1">
-                            <div class="service-row1">
-                                <p><img src="assets/icons/internet.png" style="width: 22px; height: 22px;"> Air Conditioning</p>
-                                <p><img src="assets/icons/wi-fi-icon.png" style="width: 22px; height: 22px;"> Wifi Free</p>
-                            </div>
-                            <div class="service-row1">
-                                <p><img src="assets/icons/coffee-cup (1).png" style="width: 22px; height: 22px;"> Tea/Coffee Maker</p>
-                                <p><img src="assets/icons/toilet.png" style="width: 22px; height: 22px;"> Private Bathroom</p>
-                            </div>
-                        </div>
-                        <div class="btn-detail-room">
-                            <button class="detail-btn" onclick="openRoomModal()">
-                                <span>Details</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="btn-viewallroom">
-            <a href="rooms.html">
-                <span>View All Rooms</span>
-                <img src="assets/icons/right-arrow.png" alt="Arrow Icon">
-            </a>
-        </div>
-    </div>
-    <!-- Excursions & Activities -->
-    <div class="Excursions-Activities">
-        <div class="row">
-            <div class="col-12">
-                <div class="Ex-Act-welcome">
-                    <h2>Excursions & Activities</h2>
-                    <p>Explore the best of Kampot with our curated tours</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <div class="Ex-Act-detail">
-                    <img src="images/gallerys/bokor-hill-station-tour-kampot.jpg" alt="No image">
-                    <h4 class="ex-act-name">Full Day Bokor National Park</h4>
-                    <a href="#" onclick="openActivityModal(); return false;">
-                        <span>Click to View Details</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="Ex-Act-detail">
-                    <img src="images/gallerys/cao-nguyên-Bokor-ivivu.jpg" alt="No image">
-                    <h4 class="ex-act-name">Bokor Park & Country Side</h4>
-                    <a href="#" onclick="openActivityModal(); return false;">
-                        <span>Click to View Details</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="Ex-Act-detail">
-                    <img src="images/gallerys/q1.jpg" alt="No image">
-                    <h4 class="ex-act-name">Tours to Countryside and Kep</h4>
-                    <a href="excursions_activities_detail.html">
-                        <span>Click to View Details</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="Ex-Act-detail">
-                    <img src="images/gallerys/caption.jpg" alt="No image">
-                    <h4 class="ex-act-name">Countryside Afternoon Visit</h4>
-                    <a href="#" onclick="openActivityModal(); return false;">
-                        <span>Click to View Details</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="Ex-Act-detail">
-                    <img src="images/gallerys/Cambodia-Taxi-Driver-4128.webp" alt="No image">
-                    <h4 class="ex-act-name">Private Transport</h4>
-                    <a href="#" onclick="openActivityModal(); return false;">
-                        <span>Click to View Details</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="Ex-Act-detail">
-                    <img src="images/gallerys/dariozcountryside2.webp" alt="No image">
-                    <h4 class="ex-act-name">Rent Honda</h4>
-                    <a href="#" onclick="openActivityModal(); return false;">
-                        <span>Click to View Details</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Guest Reviews-Experiences -->
-    <div class="Guest-Reviews-Experiences">
-        <div class="row">
-            <div class="col-12">
-                 <div class="review-header">
-                    <h2>Guest Reviews & Experiences</h2>
-                    <p>
-                        Real stories from guests who found serenity by the Kampot River
-                    </p>
-                </div>
-            </div>
-            <!-- Review 1 -->
-            <div class="col-4">
-                <div class="review-card">
-                    <div class="review-profile">
-                        <span>R</span>
-                    </div>
-                    <div class="stars">
-                        ★ ★ ★ ★ ★
-                    </div>
 
-                    <p class="review-text">
-                        "The staff were all SO friendly. The location is out of town 
-                        a bit but easily reached by a tuk tuk or scooter. Lovely rooms."
-                    </p>
+            <div class="booking-bar">
+                <div class="input-group">
+                    <label><i class="fa-solid fa-calendar-days icon"></i> Arrival</label>
+                    <input type="date">
+                </div>
 
-                    <h3>Reaksmey</h3>
-                    <small>Cambodia</small>
+                <div class="input-group">
+                    <label><i class="fa-regular fa-moon icon"></i> Nights</label>
+                    <input type="number" min="1" value="1">
+                </div>
 
+                <div class="input-group">
+                    <label><i class="fa-solid fa-user-group icon"></i> Adults</label>
+                    <input type="number" min="1" value="2">
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-children icon"></i> Children</label>
+                    <input type="number" min="0" value="0">
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-bed icon"></i> Rooms</label>
+                    <input type="number" min="1" value="1">
+                </div>
+
+                <div class="button-group">
+                    <button class="book-btn">
+                        <i class="fa-solid fa-hand-pointer"></i> Book Now
+                    </button>
                 </div>
             </div>
-            <!-- Review 2 -->
-            <div class="col-4">
-                <div class="review-card">
-                    <div class="review-profile">
-                        <span>H</span>
-                    </div>
-                    <div class="stars">
-                        ★ ★ ★ ★ ☆
-                    </div>
-                    <p class="review-text">
-                        "The view of the river front from the room is incredibly 
-                        beautiful and it's close to so many mountains you can explore."
-                    </p>
-                    <h3>Harry</h3>
-                    <small>Australia</small>
+            <a href="#" class="btn-check-availability">✔ Check Availability</a>
+
+        </div>
+    </main>
+    <div class="row" id="row1">
+    <div class="room-details">
+        <div class="col-4">
+            <div class="room-card">
+                <img src="images/rooms/room1.jpg" alt="Deluxe Double Room">
+                <div class="detail-rooms">
+                    <h4 class="name-room">Deluxe Double Room with Sea View</h4>
+                    <h5 class="price">From $45 <span>/ night</span></h5>
+                    <p class="descr">The spacious double room offers air conditioning, a tea and coffee maker, a terrace with sea views as well as a private bathroom boasting a walk-in shower.</p>
+                    <button class="detail-btn">
+                        <img src="assets/icons/info.png" alt="info icon"> Detail
+                    </button>
                 </div>
             </div>
-            <!-- Review 3 -->
-            <div class="col-4">
-                <div class="review-card">
-                    <div class="review-profile">
-                        <span>K</span>
-                    </div>
-                    <div class="stars">
-                        ★ ★ ★ ★ ★
-                    </div>
-                    <p class="review-text">
-                        "An incredible experience from start to finish. The staff go 
-                        above and beyond. We rented a scooter and explored the area."
-                    </p>
-                    <h3>Kenji</h3>
-                    <small>Japan</small>
-            </div> 
         </div>
-        <!-- Row3-->
-        <div class="row">
-            <!-- Review 3 -->
-            <div class="col-4">
-                <div class="review-card">
-                    <div class="review-profile">
-                        <span>D</span>
-                    </div>
-                    <div class="stars">
-                        ★ ★ ★ ★ ★
-                    </div>
-                    <p class="review-text">
-                        "An incredible experience from start to finish. The staff go 
-                        above and beyond. We rented a scooter and explored the area."
-                    </p>
-                    <h3>Dara</h3>
-                    <small>Cambodia</small>
+
+        <div class="col-4">
+            <div class="room-card">
+                <img src="images/rooms/room2.jpg" alt="Family Room">
+                <div class="detail-rooms">
+                    <h4 class="name-room">Family Room with Sea View</h4>
+                    <h5 class="price">From $58 <span>/ night</span></h5>
+                    <p class="descr">The family room features air conditioning, a tea and coffee maker, a terrace with garden views as well as a private bathroom boasting a walk-in shower.</p>
+                    <button class="detail-btn">
+                        <img src="assets/icons/info.png" alt="info icon"> Detail
+                    </button>
                 </div>
-            </div> 
-            <!-- Review 3 -->
-            <div class="col-4">
-                <div class="review-card">
-                    <div class="review-profile">
-                        <span>S</span>
-                    </div>
-                    <div class="stars">
-                        ★ ★ ★ ★ ★
-                    </div>
-                    <p class="review-text">
-                        "An incredible experience from start to finish. The staff go 
-                        above and beyond. We rented a scooter and explored the area."
-                    </p>
-                    <h3>Syvon</h3>
-                    <small>Japan</small>
-                </div>
-            </div> 
-            <!-- Review 3 -->
-            <div class="col-4">
-                <div class="review-card">
-                    <div class="review-profile">
-                        <span>V</span>
-                    </div>
-                    <div class="stars">
-                        ★ ★ ★ ★ ★
-                    </div>
-                    <p class="review-text">
-                        "An incredible experience from start to finish. The staff go 
-                        above and beyond. We rented a scooter and explored the area."
-                    </p>
-                    <h3>Vy</h3>
-                    <small>Cambodia</small>
-                </div>
-            </div> 
+            </div>
         </div>
-        <!-- Row2-->
-        <div class="row">
-            <!-- Review 3 -->
-            <div class="col-4">
-                <div class="review-card">
-                    <div class="review-profile">
-                        <span>N</span>
-                    </div>
-                    <div class="stars">
-                        ★ ★ ★ ★ ★
-                    </div>
-                    <p class="review-text">
-                        "An incredible experience from start to finish. The staff go 
-                        above and beyond. We rented a scooter and explored the area."
-                    </p>
-                    <h3>Nokea</h3>
-                    <small>China</small>
+
+        <div class="col-4">
+            <div class="room-card">
+                <img src="images/rooms/room2.jpg" alt="Queen Room">
+                <div class="detail-rooms">
+                    <h4 class="name-room">Queen Room with Sea View</h4>
+                    <h5 class="price">From $43 <span>/ night</span></h5>
+                    <p class="descr">The spacious double room offers air conditioning, a tea and coffee maker, a terrace with sea views as well as a private bathroom boasting a walk-in shower.</p>
+                    <button class="detail-btn"><img src="assets/icons/info.png" alt="info icon"> Detail</button>
                 </div>
-            </div> 
-            <!-- Review 3 -->
-            <div class="col-4">
-                <div class="review-card">
-                    <div class="review-profile">
-                        <span>P</span>
-                    </div>
-                    <div class="stars">
-                        ★ ★ ★ ★ ★
-                    </div>
-                    <p class="review-text">
-                        "An incredible experience from start to finish. The staff go 
-                        above and beyond. We rented a scooter and explored the area."
-                    </p>
-                    <h3>Pou</h3>
-                    <small>Cambodia</small>
-                </div>
-            </div> 
-            <!-- Review 3 -->
-            <div class="col-4">
-                <div class="review-card">
-                    <div class="review-profile">
-                        <span>L</span>
-                    </div>
-                    <div class="stars">
-                        ★ ★ ★ ★ ★
-                    </div>
-                    <p class="review-text">
-                        "An incredible experience from start to finish. The staff go 
-                        above and beyond. We rented a scooter and explored the area."
-                    </p>
-                    <h3>Ly</h3>
-                    <small>Japan</small>
-                </div>
-            </div> 
+            </div>
         </div>
+
     </div>
-    <!-- Footer -->
+</div>
+    <div class="row" id ="row1">
+    <div class="room-details">
+        
+        <div class="col-4">
+            <div class="room-card">
+                <img src="images/rooms/room1.jpg" alt="Deluxe Double Room">
+                <div class="detail-rooms">
+                    <h4 class="name-room">Family Room with Garden View</h4>
+                    <h5 class="price">From $40 <span>/ night</span></h5>
+                    <p class="descr">The family room features air conditioning, a tea and coffee maker, a terrace with garden views as well as a private bathroom boasting a walk-in shower.</p>
+                    <button class="detail-btn">
+                        <img src="assets/icons/info.png" alt="info icon"> Detail
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="room-card">
+                <img src="images/rooms/room2.jpg" alt="Family Room">
+                <div class="detail-rooms">
+                    <h4 class="name-room">Double Room with Garden View</h4>
+                    <h5 class="price">From $30 <span>/ night</span></h5>
+                    <p class="descr">The spacious double room offers air conditioning, a tea and coffee maker, a terrace with garden views as well as a private bathroom boasting a walk-in shower.</p>
+                    <button class="detail-btn">
+                        <img src="assets/icons/info.png" alt="info icon"> Detail
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="room-card">
+                <img src="images/rooms/room2.jpg" alt="Queen Room">
+                <div class="detail-rooms">
+                    <h4 class="name-room">Relax Room with Sea View</h4>
+                    <h5 class="price">From $50 <span>/ night</span></h5>
+                    <p class="descr">Enjoy a relaxing stay in our spacious sea-view room featuring air conditioning, tea and coffee facilities, a private walk-in shower, and a terrace with beautiful ocean views.</p>
+                    <button class="detail-btn"><img src="assets/icons/info.png" alt="info icon"> Detail</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
     <div class="footer">
-        <div class="row">
-            <!-- About -->
-            <div class="col-4">
-                <h3>
-                    <img src="images/logo/kampot.png" alt="Kampot Riverside Logo">
-                    <span>Kampot Riverside</span>
-                </h3>
-                <p style="padding-left: 15px;">
+    <div class="row">
+        <div class="col-4">
+            <h3>
+                <img src="images/logo/kampot.png" alt="Kampot Riverside Logo">
+                <span>Kampot Riverside</span>
+            </h3>
+            <div class="about-content">
+                <img src="assets/icons/coffee-cup (1).png" alt="Info Icon">
+                <p>
                     Kampot Riverfront Boutique — riverside stays,
                     authentic local dining, and unforgettable
                     water experiences in Kampot province.
                 </p>
             </div>
-
-            <!-- Contact Us -->
-            <div class="col-4">
-                <h3>
-                    <span>Contact Us</span>
-                </h3>
-                <ul>
-                     <li>
-                        <a href="mailto:Kampot@gmail.com">
-                            <img src="assets/icons/envelope.png" alt="Email Icon">
-                            <span>Kampot@gmail.com</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="tel:+85596889324">
-                            <img src="assets/icons/phone-call.png" alt="Phone Icon">
-                            <span>+855 968 893 24</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://maps.app.goo.gl/MNz4LA59FjtXAUts7">
-                            <img src="assets/icons/marker.png" alt="Location Icon">
-                            <span>Our Location on Google Maps</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-
-            <!-- Follow Us -->
-            <div class="col-4">
-                <h3>
-                    <span>Follow Us</span>
-                </h3>
-
-                <ul class="social-links">
-
-                    <li>
-                        <a href="https://www.facebook.com/profile.php?id=100081976213321">
-                            <img src="assets/icons/facebook.png" alt="Facebook Icon">
-                            <span>Facebook</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://www.tiktok.com/@riforevery/video/7606261949273345301?q=Kampot%20province&t=1779953133184">
-                            <img src="assets/icons/tik-tok.png" alt="TikTok Icon">
-                            <span>TikTok</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <img src="assets/icons/instagram.png" alt="Instagram Icon">
-                            <span>Instagram</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <img src="assets/icons/telegram.png" alt="Telegram Icon">
-                            <span>Telegram</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <img src="assets/icons/whatsapp.png" alt="WhatsApp Icon">
-                            <span>WhatsApp</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <hr>
-            </div>
+
+        <div class="col-4">
+            <h3>
+                <span>Contact Us</span>
+            </h3>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="assets/icons/envelope.png" alt="">
+                        <span>Kampot@gmail.com</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/icons/phone-call.png" alt="">
+                        <span>+885 968 893 24</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/icons/marker.png" alt="">
+                        <span>Our Location on Google Maps</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <p style="text-align: center;">© 2026 Kampot Riverside. All rights reserved.</p>
-            </div>
+
+        <div class="col-4">
+            <h3>
+                <span>Follow Us</span>
+            </h3>
+            <ul class="social-links">
+                <li>
+                    <a href="#">
+                        <img src="assets/icons/facebook.png" alt="Facebook Icon">
+                        <span>Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/icons/tik-tok.png" alt="TikTok Icon">
+                        <span>TikTok</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/icons/instagram.png" alt="Instagram Icon">
+                        <span>Instagram</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/icons/telegram.png" alt="Telegram Icon">
+                        <span>Telegram</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/icons/whatsapp.png" alt="WhatsApp Icon">
+                        <span>WhatsApp</span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
-<script src="js/room_detail.js"></script>
-<script src="js/main.js"></script>
-<script src="js/activity_detail.js"></script>
+    
+    <div class="row">
+        <div class="col-12">
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p style="text-align: center;">© 2026 Kampot Riverside. All rights reserved.</p>
+        </div>
+    </div>
+</div>
 </body>
+<script src="room_details.js"></script>
+<script src="main.js"></script>
+<script src="activity_detail.js"></script>
 </html>
