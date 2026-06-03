@@ -5,18 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/room_detail.css">
+    <link rel="stylesheet" href="css/activity_detail.css">
 </head>
 <body>
+    <!-- ROOM DETAIL MODAL -->
+    <div id="roomModal" class="modal">
+        <div class="modal-content">
+            <!-- HEADER -->
+            <div class="modal-header">
+                <h2>Deluxe Double Room with Sea View</h2>
+                <span class="close-btn" onclick="closeRoomModal()">&times;</span>
+            </div>
+            <!-- IMAGE SECTION -->
+            <div class="modal-image-section">
+                <button class="nav-btn left" onclick="prevImage()">
+                    &#10094;
+                </button>
+                <img id="roomImage"
+                    src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop"
+                    alt="Room Image">
+                <button class="nav-btn right" onclick="nextImage()">
+                    &#10095;
+                </button>
+            </div>
+            <!-- IMAGE COUNT -->
+            <div class="image-count">
+                <span id="imageCounter">1/4</span>
+            </div>
+            <!-- ROOM INFO -->
+            <div class="room-info">
+                <div>
+                    <h1>From <span>$45</span> / night</h1>
+                    <div class="features">
+                        <div class="feature-box">
+                            👨‍👩‍👧 2 Guests
+                        </div>
+                        <div class="feature-box">
+                            🛏 1 Extra-large double bed
+                        </div>
+                    </div>
+                </div>
+                <button class="book-btn">
+                    Book now
+                </button>
+            </div>
+            <!-- DESCRIPTION & AMENITIES -->
+            <div class="room-extra-details">
+                <!-- DESCRIPTION -->
+                <div class="description-box">
+                    <h3>ⓘ Description</h3>
+                    <p>
+                        The spacious double room offers air conditioning,
+                        a tea and coffee maker, a terrace with sea views
+                        as well as a private bathroom boasting a walk-in shower.
+                        The unit has 1 bed.
+                    </p>
+                </div>
+                <!-- AMENITIES -->
+                <div class="amenities-box">
+                    <h3>🛎 Room Amenities</h3>
+                    <div class="amenities-list">
+                        <span>Air Conditioning</span>
+                        <span>Private Bathroom</span>
+                        <span>Free Wifi</span>
+                        <span>Sea View</span>
+                        <span>Tea/Coffee Maker</span>
+                        <span>Terrace</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="activityModal" class="modal-act">
+
+        <div class="tour-card">
+            <span class="close-btn-atc" onclick="closeActivityModal()">
+                &times;
+            </span>
+
+            <h2>Full Day Bokor National Park</h2>
+
+            <p class="tour-desc">
+                LET'S US BOOK YOUR TOUR. Starts 8:30 am,
+                pick up at your guesthouse.
+            </p>
+
+            <p class="tour-include">
+                Includes: Lunch, water, transport,
+                English speaking guide.
+            </p>
+
+            <ul class="tour-list">
+                <li>Bokor Palace, Old Hotel & Casino</li>
+                <li>Black Palace</li>
+                <li>Church</li>
+                <li>Old Palace & Temple</li>
+                <li>Old French Building</li>
+                <li>Popok Vil Waterfall</li>
+                <li>Return: 2:30–3:00 pm</li>
+            </ul>
+
+            <div class="tour-price">
+                Price: $16
+            </div>
+
+            <hr>
+
+            <p class="tour-footer">
+                Tap to request a booking or ask about pickup.
+            </p>
+
+        </div>
+
+    </div>
+    <!-- -------------------------->
     <div class="header">
         <div class="nav-bar">
             <div class="nav-left">
                 <a class="logo" href="index.html">
-                    <img src="images/logo/kampot.png" alt="Kampot Riverside Logo" onerror="this.style.display='none'">
+                    <img src="images/logo/kampot.png" alt="Kampot Riverside Logo">
                     <span>Kampot Riverside</span>
                 </a>
             </div>
 
-            <nav class="nav-center">
+            <nav class="nav-center" id="navMenu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="rooms.html">Rooms</a></li>
@@ -25,17 +139,26 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-
             <div class="nav-right">
                 <div class="switch-language">
-                    <img src="assets/icons/internet.png" alt="Language Icon"">
-                    <select aria-label="Language selector">
-                        <option value="en">English</option>
-                        <option value="km">Khmer</option>
+                    <img src="assets/icons/internet.png" alt="Language Icon">
+                    <select>
+                        <option>English</option>
+                        <option>Khmer</option>
                     </select>
                 </div>
+
                 <div class="notifications">
-                    <img src="assets/icons/notification.png" alt="No image">
+                    <img src="assets/icons/notification.png" alt="Notification">
+                </div>
+
+                <div class="dark-mode" onclick="toggleDarkMode()">
+                    <img id="darkIcon" src="assets/icons/moon.png" alt="Dark Mode">
+                </div>
+
+                <!-- Hamburger Menu -->
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    ☰
                 </div>
             </div>
         </div>
@@ -82,9 +205,11 @@
                             </div>
                         </div>
                         <div class="btn-detail-room">
-                            <a href="detail.html">
-                                <span>Details</span>
-                            </a>
+                            <button type="button"
+                                    class="detail-btn"
+                                    onclick="openRoomModal()">
+                                    <span>Details</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -107,9 +232,9 @@
                             </div>
                         </div>
                         <div class="btn-detail-room">
-                            <a href="detail.html">
+                            <button class="detail-btn" onclick="openRoomModal()">
                                 <span>Details</span>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -137,7 +262,7 @@
                 <div class="Ex-Act-detail">
                     <img src="images/gallerys/bokor-hill-station-tour-kampot.jpg" alt="No image">
                     <h4 class="ex-act-name">Full Day Bokor National Park</h4>
-                    <a href="excursions_activities_detail.html">
+                    <a href="#" onclick="openActivityModal(); return false;">
                         <span>Click to View Details</span>
                     </a>
                 </div>
@@ -146,7 +271,7 @@
                 <div class="Ex-Act-detail">
                     <img src="images/gallerys/cao-nguyên-Bokor-ivivu.jpg" alt="No image">
                     <h4 class="ex-act-name">Bokor Park & Country Side</h4>
-                    <a href="excursions_activities_detail.html">
+                    <a href="#" onclick="openActivityModal(); return false;">
                         <span>Click to View Details</span>
                     </a>
                 </div>
@@ -164,7 +289,7 @@
                 <div class="Ex-Act-detail">
                     <img src="images/gallerys/caption.jpg" alt="No image">
                     <h4 class="ex-act-name">Countryside Afternoon Visit</h4>
-                    <a href="excursions_activities_detail.html">
+                    <a href="#" onclick="openActivityModal(); return false;">
                         <span>Click to View Details</span>
                     </a>
                 </div>
@@ -173,7 +298,7 @@
                 <div class="Ex-Act-detail">
                     <img src="images/gallerys/Cambodia-Taxi-Driver-4128.webp" alt="No image">
                     <h4 class="ex-act-name">Private Transport</h4>
-                    <a href="excursions_activities_detail.html">
+                    <a href="#" onclick="openActivityModal(); return false;">
                         <span>Click to View Details</span>
                     </a>
                 </div>
@@ -182,14 +307,15 @@
                 <div class="Ex-Act-detail">
                     <img src="images/gallerys/dariozcountryside2.webp" alt="No image">
                     <h4 class="ex-act-name">Rent Honda</h4>
-                    <a href="excursions_activities_detail.html">
+                    <a href="#" onclick="openActivityModal(); return false;">
                         <span>Click to View Details</span>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="Guest Reviews-Experiences">
+    <!-- Guest Reviews-Experiences -->
+    <div class="Guest-Reviews-Experiences">
         <div class="row">
             <div class="col-12">
                  <div class="review-header">
@@ -276,7 +402,7 @@
             <div class="col-4">
                 <div class="review-card">
                     <div class="review-profile">
-                        <span>K</span>
+                        <span>S</span>
                     </div>
                     <div class="stars">
                         ★ ★ ★ ★ ★
@@ -285,7 +411,7 @@
                         "An incredible experience from start to finish. The staff go 
                         above and beyond. We rented a scooter and explored the area."
                     </p>
-                    <h3>Kenji</h3>
+                    <h3>Syvon</h3>
                     <small>Japan</small>
                 </div>
             </div> 
@@ -293,7 +419,7 @@
             <div class="col-4">
                 <div class="review-card">
                     <div class="review-profile">
-                        <span>K</span>
+                        <span>V</span>
                     </div>
                     <div class="stars">
                         ★ ★ ★ ★ ★
@@ -302,8 +428,8 @@
                         "An incredible experience from start to finish. The staff go 
                         above and beyond. We rented a scooter and explored the area."
                     </p>
-                    <h3>Kenji</h3>
-                    <small>Japan</small>
+                    <h3>Vy</h3>
+                    <small>Cambodia</small>
                 </div>
             </div> 
         </div>
@@ -313,7 +439,7 @@
             <div class="col-4">
                 <div class="review-card">
                     <div class="review-profile">
-                        <span>K</span>
+                        <span>N</span>
                     </div>
                     <div class="stars">
                         ★ ★ ★ ★ ★
@@ -322,15 +448,15 @@
                         "An incredible experience from start to finish. The staff go 
                         above and beyond. We rented a scooter and explored the area."
                     </p>
-                    <h3>Kenji</h3>
-                    <small>Japan</small>
+                    <h3>Nokea</h3>
+                    <small>China</small>
                 </div>
             </div> 
             <!-- Review 3 -->
             <div class="col-4">
                 <div class="review-card">
                     <div class="review-profile">
-                        <span>K</span>
+                        <span>P</span>
                     </div>
                     <div class="stars">
                         ★ ★ ★ ★ ★
@@ -339,15 +465,15 @@
                         "An incredible experience from start to finish. The staff go 
                         above and beyond. We rented a scooter and explored the area."
                     </p>
-                    <h3>Kenji</h3>
-                    <small>Japan</small>
+                    <h3>Pou</h3>
+                    <small>Cambodia</small>
                 </div>
             </div> 
             <!-- Review 3 -->
             <div class="col-4">
                 <div class="review-card">
                     <div class="review-profile">
-                        <span>K</span>
+                        <span>L</span>
                     </div>
                     <div class="stars">
                         ★ ★ ★ ★ ★
@@ -356,7 +482,7 @@
                         "An incredible experience from start to finish. The staff go 
                         above and beyond. We rented a scooter and explored the area."
                     </p>
-                    <h3>Kenji</h3>
+                    <h3>Ly</h3>
                     <small>Japan</small>
                 </div>
             </div> 
@@ -399,7 +525,7 @@
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="https://maps.app.goo.gl/MNz4LA59FjtXAUts7">
                             <img src="assets/icons/marker.png" alt="Location Icon">
                             <span>Our Location on Google Maps</span>
                         </a>
@@ -465,5 +591,8 @@
             </div>
         </div>
     </div>
+<script src="js/room_detail.js"></script>
+<script src="js/main.js"></script>
+<script src="js/activity_detail.js"></script>
 </body>
 </html>

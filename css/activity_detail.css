@@ -1,0 +1,142 @@
+.modal-act{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.5);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    /* prevent overflow */
+    padding:15px;
+    box-sizing:border-box;
+}
+
+.tour-card{
+    width:100%;
+    max-width:420px;
+    background:#b8e1ef;
+    border-radius:20px;
+    padding:20px;
+    position:relative;
+    box-sizing:border-box;
+
+    /* NO SCROLL */
+    max-height:100vh;
+
+    /* keep content inside */
+    overflow:hidden;
+}
+
+/* close button */
+.close-btn-atc{
+    position:absolute;
+    top:10px;
+    right:12px;
+    font-size:32px;
+    cursor:pointer;
+    color:#000;
+}
+
+/* title */
+.tour-card h2{
+    font-size:20px;
+    margin:20px 0;
+    color:#000;
+    text-align:center;
+}
+
+/* text */
+.tour-desc,
+.tour-include{
+    color:#333;
+    line-height:1.5;
+    margin-bottom:15px;
+    font-size:14px;
+}
+
+/* list */
+.tour-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.tour-list li{
+    margin-bottom:12px;
+    color:#1e40ff;
+    font-size:15px;
+}
+
+.tour-list li::before{
+    content:"✓";
+    color:#000;
+    font-weight:bold;
+    font-size:18px;
+    margin-right:10px;
+}
+
+/* price */
+.tour-price{
+    text-align:right;
+    font-size:18px;
+    color:red;
+    margin-top:15px;
+    margin-bottom:10px;
+}
+
+/* footer */
+.tour-footer{
+    text-align:center;
+    font-size:11px;
+    color:#555;
+    margin-top:10px;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Tablet */
+@media (max-width: 768px){
+    .tour-card{
+        max-width:90%;
+        padding:18px;
+    }
+
+    .tour-card h2{
+        font-size:18px;
+    }
+
+    .tour-list li{
+        font-size:14px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px){
+    .tour-card{
+        max-width:95%;
+        padding:15px;
+        border-radius:15px;
+    }
+
+    .tour-card h2{
+        font-size:16px;
+        margin:15px 0;
+    }
+
+    .tour-desc,
+    .tour-include{
+        font-size:13px;
+    }
+
+    .tour-list li{
+        font-size:13px;
+    }
+
+    .tour-price{
+        font-size:16px;
+    }
+
+    .close-btn-atc{
+        font-size:28px;
+    }
+}

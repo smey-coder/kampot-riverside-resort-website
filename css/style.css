@@ -18,7 +18,83 @@ body{
     padding-top: 80px;
     overflow-x: hidden;
 }
+/* DARK MODE BUTTON */
+.dark-mode{
+    width: 45px;
+    height: 45px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.2);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.dark-mode:hover{
+    background: rgba(255,255,255,0.35);
+    transform: rotate(15deg) scale(1.08);
+}
+
+.dark-mode img{
+    width: 24px;
+    height: 24px;
+}
+
+/* BODY TRANSITION */
+body{
+    transition: background 0.4s ease,
+                color 0.4s ease;
+}
+
+/* DARK MODE */
+body.dark-theme{
+    background: #121212;
+    color: white;
+}
+
+/* NAVBAR */
+/* body.dark-theme nav{
+    background: #1f1f1f;
+} */
+
+/* CARD / ROOM */
+body.dark-theme .room-card,
+body.dark-theme .modal-content,
+body.dark-theme .room-extra-details{
+    background: #1e1e1e;
+    color: white;
+}
+
+/* TEXT */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme p,
+body.dark-theme span,
+body.dark-theme a{
+    color: rgb(8, 33, 229);
+}
+
+/* FEATURE BOX */
+body.dark-theme .feature-box{
+    background: #2a2a2a;
+    border-color: #444;
+}
+
+/* AMENITIES */
+body.dark-theme .amenities-list span{
+    background: #2a2a2a;
+    color: white;
+}
+
+/* MODAL IMAGE AREA */
+body.dark-theme .modal-image-section{
+    background: black;
+}
 /* =========================
    HEADER
 ========================= */
@@ -443,15 +519,15 @@ body{
     transform: translateX(5px);
 }
 /* button detail room */
-.btn-detail-room {
+/* .btn-detail-room {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 20px;
     background-color: darkgray;
     border-radius: 12px;
-}
-.btn-detail-room a {
+} */
+/* .btn-detail-room a {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -462,11 +538,11 @@ body{
     font-weight: 600;
     border-radius: 50px;
     transition: 0.3s ease;
-}
-.btn-detail-room:hover {
+} */
+/* .btn-detail-room:hover {
     background-color: #0097a7;
     transform: translateY(-3px);
-}
+} */
 /* Excursions & Activities */
 .Ex-Act-welcome {
     width: 100%;
@@ -534,7 +610,6 @@ body{
 .Guest-Reviews-Experiences{
     width: 100%;
     padding: 80px 20px;
-    background: #f6e3e3;
     box-sizing: border-box;
 }
 
@@ -612,6 +687,142 @@ body{
     gap: 20px;
     box-sizing: border-box;
 }
+.nav-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+}
+
+.nav-center ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-center ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+
+/* =========================
+   HAMBURGER MENU
+========================= */
+
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    cursor:pointer;
+    color:#1e293b;
+    transition:0.3s ease;
+    user-select:none;
+}
+
+.menu-toggle:hover{
+    transform:scale(1.1);
+    color:#0ea5e9;
+}
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+@media (max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-center{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#ffffff;
+        box-shadow:0 8px 25px rgba(0,0,0,0.1);
+        border-top:1px solid #e5e7eb;
+        display:none;
+        z-index:999;
+        animation:slideDown 0.3s ease;
+    }
+
+    .nav-center.active{
+        display:block;
+    }
+
+    .nav-center ul{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        list-style:none;
+        padding:25px 0;
+        gap:20px;
+    }
+
+    .nav-center ul li{
+        width:100%;
+        text-align:center;
+    }
+
+    .nav-center ul li a{
+        display:block;
+        padding:12px 20px;
+        text-decoration:none;
+        color:#334155;
+        font-size:16px;
+        font-weight:500;
+        transition:0.3s ease;
+    }
+
+    .nav-center ul li a:hover{
+        background:#f8fafc;
+        color:#0ea5e9;
+    }
+
+    /* Right Side */
+    .nav-right{
+        gap:10px;
+    }
+
+    .switch-language{
+        display:flex;
+        align-items:center;
+        gap:5px;
+    }
+
+    .switch-language select{
+        display:flex;
+        align-items:center;
+        gap:8px;
+        padding:6px 10px;
+        border:1px solid #ddd;
+        border-radius:10px;
+        background:#fff;
+    }
+
+    .notifications img,
+    .dark-mode img,
+    .switch-language img{
+        width:22px;
+        height:22px;
+    }
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes slideDown{
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 .row::after{
     content: "";
     clear: both;
@@ -668,6 +879,7 @@ body{
 
     body{
         padding-top: 140px;
+        background-color: #43b9e1;
     }
 
     [class*="col-"]{
