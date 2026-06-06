@@ -217,7 +217,7 @@ body.dark-theme .modal-image-section{
 }
 
 /* =========================
-   HERO SECTION
+    HERO SECTION
 ========================= */
 .main-contant{
     width: 100%;
@@ -234,7 +234,7 @@ body.dark-theme .modal-image-section{
 }
 
 /* =========================
-   HOME BANNER
+    HOME BANNER
 ========================= */
 .home-banner{
     width: 100%;
@@ -255,7 +255,7 @@ body.dark-theme .modal-image-section{
 }
 
 /* =========================
-   BUTTON
+    BUTTON
 ========================= */
 .btn{
     display: inline-block;
@@ -269,6 +269,7 @@ body.dark-theme .modal-image-section{
     transition: all 0.3s ease;
 }
 
+
 .btn:hover{
     background-color: #28c96a;
     transform: translateY(-2px);
@@ -279,7 +280,7 @@ body.dark-theme .modal-image-section{
 }
 
 /* =========================
-   ROOM SUMMARY
+    ROOM SUMMARY
 ========================= */
 .room-summary{
     width: 100%;
@@ -674,7 +675,7 @@ body.dark-theme .modal-image-section{
     color: blue;
 }
 /* =========================
-   GRID SYSTEM
+    GRID SYSTEM
 ========================= */
 .row{
     width: 100%;
@@ -849,7 +850,7 @@ body.dark-theme .modal-image-section{
 .col-12{width:100%;}
 
 /* =========================
-   TABLET RESPONSIVE
+    TABLET RESPONSIVE
 ========================= */
 @media only screen and (max-width: 992px){
     body{
@@ -873,7 +874,7 @@ body.dark-theme .modal-image-section{
     }
 }
 /* =========================
-   MOBILE RESPONSIVE
+    MOBILE RESPONSIVE
 ========================= */
 @media only screen and (max-width: 768px){
 
@@ -930,7 +931,7 @@ body.dark-theme .modal-image-section{
 }
 
 /* =========================
-   SMALL MOBILE
+    SMALL MOBILE
 ========================= */
 @media only screen and (max-width: 576px){
 
