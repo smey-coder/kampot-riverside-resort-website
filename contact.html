@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – Kampot Riverside</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+    <!-- ----------Header---------------->
+    <div class="header">
+        <div class="nav-bar">
+            <div class="nav-left">
+                <a class="logo" href="index.html">
+                    <img src="images/logo/kampot.png" alt="Kampot Riverside Logo">
+                    <span>Kampot Riverside</span>
+                </a>
+            </div>
+
+            <nav class="nav-center" id="navMenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="room.html">Rooms</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <div class="switch-language">
+                    <img src="assets/icons/internet.png" alt="Language Icon">
+                    <select>
+                        <option>English</option>
+                        <option>Khmer</option>
+                    </select>
+                </div>
+
+                <div class="notifications">
+                    <img src="assets/icons/notification.png" alt="Notification">
+                </div>
+
+                <div class="dark-mode" onclick="toggleDarkMode()">
+                    <img id="darkIcon" src="assets/icons/moon.png" alt="Dark Mode">
+                </div>
+
+                <!-- Hamburger Menu -->
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    ☰
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ── HERO  -->
+    <section class="contact-hero">
+        <img src="images/hero/about.jfif" alt="Kampot riverside morning">
+        <div class="contact-hero-overlay">
+            <p class="eyebrow">Get in Touch</p>
+            <h1>We're Here to<br><em>Welcome You</em></h1>
+            <div class="hero-rule"></div>
+        </div>
+    </section>
+
+    <!-- ── QUICK CONTACT STRIP ───────────────────────── -->
+    <div class="quick-strip">
+        <div class="quick-strip-inner">
+            <a class="quick-item" href="mailto:kampot@gmail.com">
+                <div class="qi-icon">
+                    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="qi-text">
+                    <span class="qi-label">Email Us</span>
+                    <span class="qi-value">Kampot@gmail.com</span>
+                </div>
+            </a>
+            <a class="quick-item" href="tel:+885968893240">
+                <div class="qi-icon">
+                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.36a16 16 0 0 0 6 6l1.72-1.72a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="qi-text">
+                    <span class="qi-label">Call Us</span>
+                    <span class="qi-value">+885 968 893 24</span>
+                </div>
+            </a>
+            <a class="quick-item" href="https://maps.google.com" target="_blank" rel="noopener">
+                <div class="qi-icon">
+                    <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="qi-text">
+                    <span class="qi-label">Find Us</span>
+                    <span class="qi-value">Kampot Riverside, Cambodia</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- ── MAIN BODY ──────────────────────────────────── -->
+    <div class="contact-body">
+
+        <!-- FORM -->
+        <div class="form-side">
+            <p class="section-label">Send a Message</p>
+            <h2>Tell Us About<br>Your Stay</h2>
+            <p>Whether you have a question, a special request, or just want to say hello — fill in the form and our team will get back to you within one business day.</p>
+
+            <form id="contactForm" novalidate>
+                <div class="form-row">
+                    <div class="field">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="fname" placeholder="Dara" required>
+                    </div>
+                    <div class="field">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname" placeholder="Sok" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="field">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+855 ...">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject">
+                        <option value="" disabled selected>Select a topic…</option>
+                        <option value="booking">Room Booking</option>
+                        <option value="special">Special Request</option>
+                        <option value="dining">Restaurant &amp; Dining</option>
+                        <option value="activities">Activities &amp; Tours</option>
+                        <option value="event">Private Event</option>
+                        <option value="other">Other Inquiry</option>
+                    </select>
+                </div>
+
+                <p class="section-label" style="margin-bottom: 0.6rem; margin-top: 0.4rem;">Planned Stay (optional)</p>
+                <div class="dates-row">
+                    <div class="field">
+                        <label for="checkin">Check-in</label>
+                        <input type="date" id="checkin" name="checkin">
+                    </div>
+                    <div class="field">
+                        <label for="checkout">Check-out</label>
+                        <input type="date" id="checkout" name="checkout">
+                    </div>
+                    <div class="field">
+                        <label for="guests">Guests</label>
+                        <input type="number" id="guests" name="guests" min="1" max="20" placeholder="2">
+                    </div>
+                </div>
+
+                <div class="field" style="margin-top: 0.4rem;">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us anything you'd like us to know before your arrival…"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Send Message
+                    <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+
+                <div class="form-success" id="formSuccess">
+                    ✓ Thank you! Your message has been sent. We'll reply within one business day.
+                </div>
+            </form>
+        </div>
+
+        <!-- INFO -->
+        <div class="info-side">
+
+            <!-- Google Map embed placeholder -->
+            <div class="map-box">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62724.62284958!2d104.13!3d10.61!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31bb51c13dd6cfe7%3A0x24b79e9527c7ac29!2sKampot%2C%20Cambodia!5e0!3m2!1sen!2skh!4v1700000000000"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Kampot Riverside location on Google Maps">
+                </iframe>
+            </div>
+
+            <div class="info-card">
+                <p class="ic-label">Address</p>
+                <p class="ic-main">Kampot Riverside Resort</p>
+                <p class="ic-sub">Riverside Road, Kampot Province,<br>Kingdom of Cambodia</p>
+            </div>
+
+            <div class="info-card">
+                <p class="ic-label">Reception Hours</p>
+                <table class="hours-table">
+                    <tr><td>Monday – Friday</td><td>7:00 AM – 10:00 PM</td></tr>
+                    <tr><td>Saturday – Sunday</td><td>6:30 AM – 11:00 PM</td></tr>
+                    <tr><td>Public Holidays</td><td>Open All Day</td></tr>
+                </table>
+            </div>
+
+            <div class="info-card">
+                <p class="ic-label">Check-in / Check-out</p>
+                <p class="ic-main">Check-in from 2:00 PM</p>
+                <p class="ic-sub">Check-out by 12:00 PM<br>Early/late options available on request</p>
+            </div>
+
+            <!-- Social links -->
+            <div class="social-row">
+                <a class="social-btn" href="#" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    Facebook
+                </a>
+                <a class="social-btn" href="#" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    Instagram
+                </a>
+                <a class="social-btn" href="#" aria-label="Telegram">
+                    <svg viewBox="0 0 24 24"><path d="M21.19 3.18L2.81 10.11c-1.3.53-1.28 1.27-.24 1.6l4.64 1.45 10.74-6.76c.51-.31.97-.14.59.2L8.83 15.77l-.34 4.82c.49 0 .71-.22.97-.48l2.34-2.26 4.86 3.58c.9.49 1.54.24 1.77-.83l3.21-15.13c.32-1.32-.5-1.92-1.45-1.29z"/></svg>
+                    Telegram
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── FAQ ───────────────────────────────────────── -->
+    <div class="faq-band">
+        <div class="faq-inner">
+            <div class="faq-heading">
+                <p class="eyebrow" style="color: var(--sky-deep); margin-bottom: 0.8rem;">Common Questions</p>
+                <h2>Before You Reach Out</h2>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    Do you offer airport transfers from Phnom Penh?
+                    <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-a">
+                    <p>Yes — we can arrange private transfers from Phnom Penh International Airport to the resort. Please contact us at least 48 hours before your arrival with your flight details and we'll take care of the rest.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    Is there parking available at the resort?
+                    <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-a">
+                    <p>We have free, on-site parking for all guests with private vehicles. Motorbike rentals and bicycle lending are also available at the front desk for exploring Kampot at your own pace.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    Can I host a private event or wedding at the resort?
+                    <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-a">
+                    <p>Absolutely. Our riverside terrace and garden areas can be arranged for private gatherings of up to 80 guests. Please reach out through the contact form above and our events team will walk you through the options.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    What is your cancellation policy?
+                    <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-a">
+                    <p>Cancellations made 48 hours or more before check-in receive a full refund. Cancellations within 48 hours are charged one night's accommodation. For special-rate bookings, individual terms may apply — please check at the time of booking.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    Are pets allowed at the resort?
+                    <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-a">
+                    <p>We welcome well-behaved dogs in our garden bungalows with prior notice. A small cleaning fee applies. Please mention your pet when submitting your enquiry so we can prepare the right accommodation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── BOTTOM CTA ─────────────────────────────────── -->
+    <div class="cta-band">
+        <h2>Ready to Book Your Stay?</h2>
+        <p>Browse our rooms and find the perfect spot along the river — peaceful, beautiful, and entirely yours.</p>
+        <a href="room.html" class="btn-sky">View Our Rooms</a>
+    </div>
+
+    <!-- ── FOOTER ─────────────────────────────────────── -->
+    <!-- Footer -->
+    <div class="footer">
+        <div class="row">
+            <!-- About -->
+            <div class="col-4">
+                <h3>
+                    <img src="images/logo/kampot.png" alt="Kampot Riverside Logo">
+                    <span>Kampot Riverside</span>
+                </h3>
+                <p style="padding-left: 15px;">
+                    Kampot Riverfront Boutique — riverside stays,
+                    authentic local dining, and unforgettable
+                    water experiences in Kampot province.
+                </p>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="col-4">
+                <h3>
+                    <span>Contact Us</span>
+                </h3>
+                <ul>
+                    <li>
+                        <a href="mailto:Kampot@gmail.com">
+                            <img src="assets/icons/envelope.png" alt="Email Icon">
+                            <span>Kampot@gmail.com</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tel:+85596889324">
+                            <img src="assets/icons/phone-call.png" alt="Phone Icon">
+                            <span>+855 968 893 24</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://maps.app.goo.gl/MNz4LA59FjtXAUts7">
+                            <img src="assets/icons/marker.png" alt="Location Icon">
+                            <span>Our Location on Google Maps</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Follow Us -->
+            <div class="col-4">
+                <h3>
+                    <span>Follow Us</span>
+                </h3>
+
+                <ul class="social-links">
+
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100081976213321">
+                            <img src="assets/icons/facebook.png" alt="Facebook Icon">
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.tiktok.com/@riforevery/video/7606261949273345301?q=Kampot%20province&t=1779953133184">
+                            <img src="assets/icons/tik-tok.png" alt="TikTok Icon">
+                            <span>TikTok</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="assets/icons/instagram.png" alt="Instagram Icon">
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="assets/icons/telegram.png" alt="Telegram Icon">
+                            <span>Telegram</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="assets/icons/whatsapp.png" alt="WhatsApp Icon">
+                            <span>WhatsApp</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p style="text-align: center;">© 2026 Kampot Riverside. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <!-- ── SCRIPTS ───────────────────────────────────── -->
+    <script>
+        // FAQ accordion
+        document.querySelectorAll('.faq-q').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item.open').forEach(el => {
+                    el.classList.remove('open');
+                    el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+                });
+                if (!isOpen) {
+                    item.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Form submission (demo — shows success banner)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const success = document.getElementById('formSuccess');
+            success.style.display = 'block';
+            this.querySelectorAll('input, select, textarea').forEach(el => el.disabled = true);
+            document.querySelector('.submit-btn').disabled = true;
+            document.querySelector('.submit-btn').style.opacity = '0.5';
+            success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+
+        // Set min date on check-in/checkout to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('checkin').min = today;
+        document.getElementById('checkout').min = today;
+        document.getElementById('checkin').addEventListener('change', function() {
+            document.getElementById('checkout').min = this.value;
+        });
+    </script>
+<script src="js/main.js"></script>
+</body>
+</html>

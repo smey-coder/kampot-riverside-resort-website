@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>About – Kampot Riverside</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
     <!-- ----------Header---------------->
     <div class="header">
         <div class="nav-bar">
@@ -51,22 +55,26 @@
             </div>
         </div>
     </div>
-    <div class="welcome">
-        <div class="col-12">
-            <div class="main-contant" style="background-image:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),url('../images/gallerys/Image_place_relax/Kep Beach/photo2.jfif'); background-size: cover; background-position: center;">
-                <div class="home-banner">
-                    <div class="home-banner-content">
-                        <h1>Discover Our Resort</h1>
-                        <p>Where modern luxury meets natural beauty</p>
-                    </div>
-                </div>
-            </div>
+    <!-- ── HERO  -->
+    <section class="about-hero">
+        <img src="images/gallerys/Image_place_relax/Kep Beach/photo2.jfif" alt="Kampot riverside view" >
+        <div class="about-hero-overlay">
+            <p class="eyebrow">Our Story</p>
+            <h1>Where the River<br>Meets the <em>Sky</em></h1>
+            <div class="hero-rule"></div>
         </div>
-    </div>
-    <div class="row">
-        <div class="about-resort">
-                <div class="col-6">
-                     <!-- Slideshow container -->
+    </section>
+    <!-- ── STORY 1 ───────────────────────────────────── -->
+    <section class="section">
+        <div>
+            <div class="story-text">
+                <p class="label">Who We Are</p>
+                <h2>A Place Born From<br>the River's Edge</h2>
+                <p>Kampot Riverside Resort began as a dream shared by a small family who grew up along the banks of the Praek Tuek Chhu river. We wanted to create a place where guests could slow down, breathe in the salt-tinged air, and truly feel the soul of Kampot.</p>
+                <p>Opened in 2012, the resort has grown from four bungalows into a full boutique property — yet it has never lost the intimacy and warmth that defined it from the very first day.</p>
+            </div>
+            <div class="story-img">
+                <!-- Slideshow container -->
                     <div class="slideshow-container">
                     <!-- Full-width images with number and caption text -->
                     <div class="mySlides fade">
@@ -99,29 +107,127 @@
                     <span class="dot" onclick="currentSlide(2)"></span>
                     <span class="dot" onclick="currentSlide(3)"></span>
                     </div>
-                </div>
-                <div class="col-6">
-                    <div class="about-detail">
-                        <h1>Welcome to Your Perfect Getaway</h1>
-                    <p>
-                        Welcome to Kampot Riverside Resort, a peaceful riverside sanctuary located in the heart of beautiful Kampot Province, Cambodia. 
-                        Surrounded by lush tropical gardens and overlooking the calm Preaek Tuek Chhu River, our resort offers guests a perfect escape 
-                        into nature, comfort, and authentic Khmer hospitality.
-                    </p><br>
-                    <p>
-                        Kampot is one of Cambodia’s most attractive tourist destinations, famous for its peaceful atmosphere, colonial architecture, 
-                        stunning mountain scenery, and world-famous Kampot pepper. Visitors can enjoy relaxing river cruises, explore Bokor Mountain, 
-                        visit local pepper farms, discover salt fields, and experience traditional Cambodian culture.
-                    </p><br>
-                    <button class="btn-read-more">Read More</button>
-                    </div>
-                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── STATS ─────────────────────────────────────── -->
+    <div class="sky-band">
+        <div class="stats-row">
+            <div class="stat-item">
+                <div class="num">12<span class="unit">+</span></div>
+                <p>Years of Hospitality</p>
+            </div>
+            <div class="stat-item">
+                <div class="num">32</div>
+                <p>Riverside Rooms</p>
+            </div>
+            <div class="stat-item">
+                <div class="num">98<span class="unit">%</span></div>
+                <p>Guest Satisfaction</p>
+            </div>
+            <div class="stat-item">
+                <div class="num">4</div>
+                <p>Awards Received</p>
+            </div>
         </div>
     </div>
-    <!-- Footer -->
+
+    <!-- ── PHOTO GRID ─────────────────────────────────── -->
+    <section class="section" style="padding-top: 5rem; padding-bottom: 5rem;">
+        <div class="photo-heading">
+            <p class="label">Life at the Resort</p>
+            <h2>Moments Worth Remembering</h2>
+        </div>
+        <div class="photo-grid">
+            <!-- tall left image -->
+            <div class="p-cell p-tall">
+                <img src="images/images50/Sunset.jpg" alt="Riverside sunrise">
+            </div>
+            <div class="p-cell">
+                <img src="images/images50/Seahorse.jpg" alt="Open-air breakfast">
+            </div>
+            <div class="p-cell">
+                <img src="images/images50/Outdoor activities2.jpg" alt="Kayaking on the river">
+            </div>
+            <div class="p-cell">
+                <img src="images/images50/Dinner.jpg" alt="Evening terrace dining">
+            </div>
+            <div class="p-cell">
+                <img src="images/images50/Kayak.jpg" alt="Garden pathway">
+            </div>
+        </div>
+    </section>
+
+    <!-- ── STORY 2 ───────────────────────────────────── -->
+    <div class="sky-band">
+        <section class="section">
+            <div class="story-grid reverse">
+                <div class="story-text">
+                    <p class="label">Our Philosophy</p>
+                    <h2>Slow Travel,<br>Real Connection</h2>
+                    <p>We believe the best travel memories aren't made by rushing through itineraries — they're found in a quiet morning coffee while watching river mist clear, or in a long conversation with a local fisherman about the tides.</p>
+                    <p>Every detail at Kampot Riverside is designed to invite you to pause: handcrafted furniture from local artisans, an open-air dining terrace that follows the river breeze, and a team that genuinely wants to share the best of our home province with you.</p>
+                </div>
+                <div class="story-img">
+                    <img src="images/images50/Front_view3.jpg" alt="Kampot slow travel philosophy">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ── QUOTE ──────────────────────────────────────── -->
+    <div class="quote-band">
+        <blockquote>"We don't just offer a room — we offer a reason to stay a little longer."</blockquote>
+        <cite>— Sok Dara, Founder, Kampot Riverside Resort</cite>
+    </div>
+
+    <!-- ── VALUES ─────────────────────────────────────── -->
+    <section class="section">
+        <div class="photo-heading">
+            <p class="label">What We Stand For</p>
+            <h2>Our Values</h2>
+        </div>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 21s-8-4.5-8-11A8 8 0 0 1 20 10c0 6.5-8 11-8 11z"/></svg>
+                </div>
+                <h3>Local at Heart</h3>
+                <p>We source ingredients from Kampot's farms, employ local staff, and partner with community artisans. The resort is an extension of the town we love.</p>
+            </div>
+            <div class="value-card">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <h3>Sustainable Stays</h3>
+                <p>Solar panels power our common areas, rainwater is harvested for the garden, and single-use plastics have been eliminated across the entire property.</p>
+            </div>
+            <div class="value-card">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                </div>
+                <h3>Genuine Warmth</h3>
+                <p>Hospitality here is never scripted. Our team greets every guest as a friend visiting our home — because to us, that is exactly what you are.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA ───────────────────────────────────────── -->
+    <div class="cta-band">
+        <div class="ornament" style="margin-bottom: 2.5rem;">
+            <div class="ornament-line"></div>
+            <div class="ornament-dot"></div>
+            <div class="ornament-line"></div>
+        </div>
+        <h2>Ready to Experience Kampot?</h2>
+        <p>Whether you're here for a night or a month, the river will leave something behind in you.</p>
+        <a href="room.html" class="btn-sky">View Our Rooms</a>
+    </div>
+
+    <!-- ── FOOTER (mirrors index.html) ───────────────── -->
     <div class="footer">
         <div class="row">
-            <!-- About -->
             <div class="col-4">
                 <h3>
                     <img src="images/logo/kampot.png" alt="Kampot Riverside Logo">
@@ -133,91 +239,29 @@
                     water experiences in Kampot province.
                 </p>
             </div>
-
-            <!-- Contact Us -->
             <div class="col-4">
-                <h3>
-                    <span>Contact Us</span>
-                </h3>
+                <h3><span>Contact Us</span></h3>
                 <ul>
-                     <li>
-                        <a href="mailto:Kampot@gmail.com">
-                            <img src="assets/icons/envelope.png" alt="Email Icon">
-                            <span>Kampot@gmail.com</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="tel:+85596889324">
-                            <img src="assets/icons/phone-call.png" alt="Phone Icon">
-                            <span>+855 968 893 24</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://maps.app.goo.gl/MNz4LA59FjtXAUts7">
-                            <img src="assets/icons/marker.png" alt="Location Icon">
-                            <span>Our Location on Google Maps</span>
-                        </a>
-                    </li>
-
+                    <li><a href="#">Kampot@gmail.com</a></li>
+                    <li><a href="#">+885 968 893 24</a></li>
+                    <li><a href="#">Our Location on Google Maps</a></li>
                 </ul>
             </div>
-
-            <!-- Follow Us -->
             <div class="col-4">
-                <h3>
-                    <span>Follow Us</span>
-                </h3>
-
-                <ul class="social-links">
-
-                    <li>
-                        <a href="https://www.facebook.com/profile.php?id=100081976213321">
-                            <img src="assets/icons/facebook.png" alt="Facebook Icon">
-                            <span>Facebook</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://www.tiktok.com/@riforevery/video/7606261949273345301?q=Kampot%20province&t=1779953133184">
-                            <img src="assets/icons/tik-tok.png" alt="TikTok Icon">
-                            <span>TikTok</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <img src="assets/icons/instagram.png" alt="Instagram Icon">
-                            <span>Instagram</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <img src="assets/icons/telegram.png" alt="Telegram Icon">
-                            <span>Telegram</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <img src="assets/icons/whatsapp.png" alt="WhatsApp Icon">
-                            <span>WhatsApp</span>
-                        </a>
-                    </li>
-
-                </ul>
+                <h3><span>Follow Us</span></h3>
+                <p>Facebook</p>
+                <p>TikTok</p>
+                <p>Instagram</p>
+                <p>Telegram</p>
+                <p>WhatsApp</p><br>
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
-                <hr>
-            </div>
+            <div class="col-12"><hr></div>
         </div>
         <div class="row">
             <div class="col-12">
-                <p style="text-align: center;">© 2026 Kampot Riverside. All rights reserved.</p>
+                <p style="text-align: center;">© 2026 Kampot Riverside. All rights reserved.</p>
             </div>
         </div>
     </div>

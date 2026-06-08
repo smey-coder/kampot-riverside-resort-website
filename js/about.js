@@ -65,3 +65,16 @@ slider.addEventListener("mouseenter", () => {
 slider.addEventListener("mouseleave", () => {
     startAutoSlide();
 });
+
+// READ MORE
+function toggleReadMore(btn) {
+    const moreText = document.getElementById("moreText");
+
+    moreText.classList.toggle("show");
+
+    if (moreText.classList.contains("show")) {
+        btn.textContent = "Read Less";
+    } else {
+        btn.textContent = "Read More";
+    }
+}

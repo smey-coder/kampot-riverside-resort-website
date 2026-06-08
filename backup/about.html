@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/gallery.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
-    <div id="loader">
-        <div class="spinner"></div>
-    </div>
     <!-- ----------Header---------------->
     <div class="header">
         <div class="nav-bar">
@@ -56,107 +53,89 @@
     </div>
     <div class="welcome">
         <div class="col-12">
-            <div class="main-contant" style="background-image:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),url('../images/gallerys/Seahorse.jpg'); background-size: cover; background-position: center;">
+            <div class="main-contant" style="background-image:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),url('../images/gallerys/Image_place_relax/Kep Beach/photo2.jfif'); background-size: cover; background-position: center;">
                 <div class="home-banner">
                     <div class="home-banner-content">
-                        <h1>Visual Journey</h1>
-                        <p>A glimpse into the tranquility of Kampot Riverfront.</p>
+                        <h1>Discover Our Resort</h1>
+                        <p>Where modern luxury meets natural beauty</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--Rooms-->
-    <div class="row"> 
-        <div class="room-home">
-            <div class="room-summary">
-                <h2>Our Gallery</h2>
-                <p>Discover the beauty of Kampot Riverfront Boutique</p>
-                <div class="room-summary-btn">
-                    <button id="allPhotosBtn" class="btn-all-photos">All Photos</button>
-                    <button id="allRoomsBtn" class="btn-all-room">All Rooms</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="row">
-        <div class="col-12">
-            <hr>
+        <div class="about-resort">
+                <div class="col-6">
+                     <!-- Slideshow container -->
+                    <div class="slideshow-container">
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="images/gallerys/Image_place_relax/Bokor Mountain/photo1.jfif" style="width:100%">
+                        <div class="text">Boko Mountain</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="images/gallerys/Image_place_relax/Kep Beach/photo3.jfif" style="width:100%">
+                        <div class="text">Kep Beach</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="images/gallerys/Image_place_relax/La Plantation/caption.jpg" style="width:100%">
+                        <div class="text">La Plantation</div>
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="about-detail">
+                        <h1>Welcome to Your Perfect Getaway</h1>
+
+                        <p>
+                            Welcome to Kampot Riverside Resort, a peaceful riverside sanctuary located in the heart of beautiful Kampot Province, Cambodia.
+                            Surrounded by lush tropical gardens and overlooking the calm Preaek Tuek Chhu River, our resort offers guests a perfect escape
+                            into nature, comfort, and authentic Khmer hospitality.
+                        </p>
+                        <br>
+                        <p>
+                            Kampot is one of Cambodia’s most attractive tourist destinations, famous for its peaceful atmosphere, colonial architecture,
+                            stunning mountain scenery, and world-famous Kampot pepper.
+                        </p>
+                        <br>
+                        <!-- Animated content -->
+                        <div id="moreText" class="more-content">
+                            <p style="font-weight: bold; font-size: 18px;">Resort Features</p>
+
+                            <ul style="list-style-type: disc; padding-left: 20px;">
+                                <li>Luxury riverside accommodation</li>
+                                <li>Private balconies with river and garden views</li>
+                                <li>Outdoor swimming pool</li>
+                                <li>Khmer and international restaurant</li>
+                                <li>Free Wi-Fi and modern amenities</li>
+                                <li>Spa and relaxation services</li>
+                                <li>Beautiful sunset viewing areas</li>
+                                <li>Friendly 24/7 hospitality service</li>
+                            </ul>
+                        </div>
+
+                        <button class="btn-read-more" onclick="toggleReadMore(this)">Read More</button>
+                    </div>
+                </div>
         </div>
     </div>
-    <!--All Gallery-->
-    <div class="all-gallerys" style="display: block;" id="all-gallarys">
-        <div class="row">
-            <div class="col-4">
-                <img src="./images/gallerys/q1.jpg" alt="image">
-            </div>
-            <div class="col-4">
-                <img src="./images/gallerys/G2.jpg" alt="image">
-            </div>
-            <div class="col-4">
-                <img src="./images/gallerys/G3.jpg" alt="image">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <img src="./images/gallerys/G4.jpg" alt="image">
-            </div>
-            <div class="col-4">
-                <img src="./images/gallerys/G5.jpg" alt="image">
-            </div>
-            <div class="col-4">
-                <img src="./images/gallerys/G6.jpg" alt="image">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <img src="./images/hero/caption.jpg" alt="image">
-            </div>
-            <div class="col-4">
-                <img src="./images/hero/Kampot-economy.webp" alt="image">
-            </div>
-            <div class="col-4">
-                <img src="./images/hero/home.jpg" alt="image">
-            </div>
-        </div>
-    </div>
-    <!--All Room-->
-    <div class="all-gallerys" style="display: none;" id="all-rooms">
-        <div class="row">
-            <div class="col-4">
-                <img src="./images/rooms/room1.jpg" alt="image">
-            </div>
-            <div class="col-4">
-                <img src="./images/rooms/room2.jpg" alt="image">
-            </div>
-            <div class="col-4">
-                <img src="./images/rooms/room3.webp" alt="image">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <img src="./images/rooms/room4.avif" alt="image">
-            </div>
-            <div class="col-4">
-                <img src="./images/rooms/room5.webp" alt="image">
-            </div>
-            <div class="col-4">
-                <img src="./images/rooms/room6.jpg" alt="image">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <img src="./images/rooms/room7.jpg" alt="image">
-            </div>
-            <div class="col-4">
-                <img src="./images/rooms/room8.jpg" alt="image">
-            </div>
-            <div class="col-4">
-                <img src="./images/rooms/room9.avif" alt="image">
-            </div>
-        </div>
-    </div>
-    
     <!-- Footer -->
     <div class="footer">
         <div class="row">
@@ -172,68 +151,80 @@
                     water experiences in Kampot province.
                 </p>
             </div>
+
             <!-- Contact Us -->
             <div class="col-4">
                 <h3>
                     <span>Contact Us</span>
                 </h3>
                 <ul>
-                    <li>
+                     <li>
                         <a href="mailto:Kampot@gmail.com">
                             <img src="assets/icons/envelope.png" alt="Email Icon">
                             <span>Kampot@gmail.com</span>
                         </a>
                     </li>
+
                     <li>
                         <a href="tel:+85596889324">
                             <img src="assets/icons/phone-call.png" alt="Phone Icon">
                             <span>+855 968 893 24</span>
                         </a>
                     </li>
+
                     <li>
-                        <a href="#">
+                        <a href="https://maps.app.goo.gl/MNz4LA59FjtXAUts7">
                             <img src="assets/icons/marker.png" alt="Location Icon">
                             <span>Our Location on Google Maps</span>
                         </a>
                     </li>
+
                 </ul>
             </div>
+
             <!-- Follow Us -->
             <div class="col-4">
                 <h3>
                     <span>Follow Us</span>
                 </h3>
+
                 <ul class="social-links">
+
                     <li>
                         <a href="https://www.facebook.com/profile.php?id=100081976213321">
                             <img src="assets/icons/facebook.png" alt="Facebook Icon">
                             <span>Facebook</span>
                         </a>
                     </li>
+
                     <li>
                         <a href="https://www.tiktok.com/@riforevery/video/7606261949273345301?q=Kampot%20province&t=1779953133184">
                             <img src="assets/icons/tik-tok.png" alt="TikTok Icon">
                             <span>TikTok</span>
                         </a>
                     </li>
+
                     <li>
                         <a href="#">
                             <img src="assets/icons/instagram.png" alt="Instagram Icon">
                             <span>Instagram</span>
                         </a>
                     </li>
+
                     <li>
                         <a href="#">
                             <img src="assets/icons/telegram.png" alt="Telegram Icon">
                             <span>Telegram</span>
                         </a>
                     </li>
+
                     <li>
                         <a href="#">
                             <img src="assets/icons/whatsapp.png" alt="WhatsApp Icon">
                             <span>WhatsApp</span>
                         </a>
                     </li>
+
                 </ul>
             </div>
         </div>
@@ -244,11 +235,11 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <p style="text-align: center;">©2026 Kampot Riverside. All rights reserved.</p>
+                <p style="text-align: center;">© 2026 Kampot Riverside. All rights reserved.</p>
             </div>
         </div>
     </div>
 <script src="js/main.js"></script>
-<script src="js/gallery.js"></script>
+<script src="js/about.js"></script>
 </body>
 </html>

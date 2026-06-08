@@ -1,0 +1,220 @@
+.btn-read-more {
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background-color: #32E875;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid #0288d1;
+    transition: all 0.3s ease;
+    cursor: pointer; /* Hand cursor */
+}
+.btn-read-more:hover {
+    background-color: #1b9be8; /* Darker accent blue on hover */
+}
+.btn-read-more:active {
+    transform: scale(0.98); /* Slightly shrink on click */
+}
+
+.about-image {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    object-fit: cover; 
+}
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Slide */
+.mySlides {
+    display: none;
+    position: relative;
+}
+
+/* Image */
+.mySlides img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    animation: zoomEffect 8s ease-in-out infinite;
+}
+
+/* Dark Overlay */
+.mySlides::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.1)
+    );
+    z-index: 1;
+}
+
+/* Number text */
+.numbertext {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    z-index: 2;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Caption */
+.text {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    color: #fff;
+    z-index: 2;
+    font-size: 28px;
+    font-weight: bold;
+    animation: slideUp 1s ease;
+}
+
+/* Previous & Next buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 18px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    transition: .3s;
+    z-index: 3;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(5px);
+}
+
+.prev {
+    left: 15px;
+    border-radius: 50%;
+}
+
+.next {
+    right: 15px;
+    border-radius: 50%;
+}
+
+.prev:hover,
+.next:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/* Dots */
+.dot {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: .4s;
+}
+
+.active,
+.dot:hover {
+    background-color: #32E875;
+    transform: scale(1.2);
+}
+
+/* Fade Animation */
+.fade {
+    animation: fadeEffect 1.5s ease;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Zoom Animation */
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Caption Animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.mySlides {
+    display: none;
+    animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.about-resort {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 40px 20px;
+}
+.about-detail {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+.more-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
+}
+
+/* Active state */
+.more-content.show {
+    max-height: 500px; /* enough height for content */
+    opacity: 1;
+    transform: translateY(0);
+}

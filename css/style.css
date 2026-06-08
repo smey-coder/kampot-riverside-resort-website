@@ -117,6 +117,7 @@ body.dark-theme h3,
 body.dark-theme h4,
 body.dark-theme p,
 body.dark-theme span,
+body.dark-theme li,
 body.dark-theme a{
     color: rgb(8, 33, 229);
 }

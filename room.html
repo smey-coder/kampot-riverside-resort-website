@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/rooms.css">
 </head>
 <body>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
     <!-- ROOM DETAIL MODAL -->
     <div id="roomModal" class="modal">
         <div class="modal-content">
@@ -173,14 +176,13 @@
                 </div>
 
                 <div class="button-group">
-                    <button class="book-btn">
+                    <button id="bookBtn" class="book-btn">
                         Book Now
                     </button>
                 </div>
-
             </div>
 
-            <a href="#" class="btn-check-availability">
+            <a href="#" class="btn-check-availability" id="btnCheckAvailability">
                 ✔ Check Availability
             </a>
         </div>
@@ -373,5 +375,6 @@
 <script src="js/room_detail.js"></script>
 <script src="js/main.js"></script>
 <script src="js/activity_detail.js"></script>
+<script src="js/room.js"></script>
 </body>
 </html>
