@@ -276,49 +276,146 @@ body.dark-theme .modal-image-section{
 }
 
 /* =========================
-    HOME BANNER
+   HERO SECTION
+========================= */
+.main-contant{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Slides */
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: scale(1.1);
+    transition: opacity 1.5s ease-in-out,
+                transform 8s linear;
+}
+
+.slide::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.slide.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* =========================
+   HOME BANNER
 ========================= */
 .home-banner{
-    width: 100%;
+    position: relative;
+    z-index: 2;
     max-width: 700px;
     padding: 40px;
     color: #fff;
     text-align: center;
-    border-radius: 12px;
+    animation: fadeUp 1.2s ease;
 }
+
 .home-banner h1{
-    font-size: 52px;
+    font-size: 58px;
     margin-bottom: 20px;
+    animation: slideDown 1.2s ease;
 }
 
 .home-banner p{
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 25px;
+    animation: fadeIn 2s ease;
 }
 
 /* =========================
-    BUTTON
+   BUTTON
 ========================= */
 .btn{
     display: inline-block;
-    padding: 12px 28px;
-    background-color: #32E875;
+    padding: 14px 30px;
+    background: #32E875;
     color: #fff;
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
     border-radius: 50px;
-    transition: all 0.3s ease;
+    transition: 0.3s;
+    animation: zoomIn 1.5s ease;
 }
-
 
 .btn:hover{
-    background-color: #28c96a;
-    transform: translateY(-2px);
+    background: #28c96a;
+    transform: translateY(-3px);
 }
 
-.btn:active{
-    transform: scale(0.98);
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes slideDown{
+    from{
+        opacity:0;
+        transform:translateY(-50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes zoomIn{
+    from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .home-banner h1{
+        font-size: 40px;
+    }
+
+    .home-banner p{
+        font-size: 16px;
+    }
 }
 
 /* =========================
